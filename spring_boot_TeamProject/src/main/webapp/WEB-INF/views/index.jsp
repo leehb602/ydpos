@@ -20,6 +20,6 @@
 			<a href="<c:url value='/profile/userProfile/${sessionScope.sid}'/>">유저 프로필</a>
 		</c:if>
 		
-		
+		<a href="<c:url value='/publicE/viewlistAllpublicEvent/'/>">공공기관</a><br/><br/>
 	</body>
 </html>
