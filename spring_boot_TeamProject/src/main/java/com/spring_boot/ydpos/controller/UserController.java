@@ -7,6 +7,7 @@ import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -19,7 +20,7 @@ public class UserController {
 	@Autowired
 	UserService service;
 	
-	// 로그인 메인
+	// 회원가입 메인
 	@RequestMapping("/join/joinMain")
 	public String joinMain() {
 		return "join/joinMain";
@@ -96,11 +97,6 @@ public class UserController {
 		return result;
 	}
 	
-	// 로그인 폼으로 이동
-	@RequestMapping("/user/loginForm")
-	public String loginForm() {
-		return "login/loginForm";
-	}
 	
 	// 로그인 시 알고리즘
 	@ResponseBody
@@ -115,6 +111,7 @@ public class UserController {
 		
 		return result;
 	}
+	
 	
 	// 로그아웃
 	@RequestMapping("/user/logout")
