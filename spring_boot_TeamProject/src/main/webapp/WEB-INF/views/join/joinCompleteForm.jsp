@@ -15,7 +15,7 @@
 				<table>
 					<tr>
 						<td colspan="2">
-						<h3>${sessionScope.sid} 님 회원가입을 환영합니다</h3>
+						<h3>${userName} 님 회원가입을 환영합니다</h3>
 						</td>
 					</tr>
 					<tr>

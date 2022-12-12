@@ -93,3 +93,37 @@ table tr {
 table th {
 	border-bottom : solid 1px;
 }
+
+.category {
+	width: 110px;
+}
+
+.time {
+	width : 130px;
+}
+
+.management {
+	width : 130px;
+}
+
+button {
+	width : 100px;
+	height: 40px;
+	line-height: 40px;
+	font-weight: bold;
+	border: none;
+	border-radius: 15px;
+	background-color: lightblue;
+	color: #ffffff;
+	font-family: 'LeferiPoint-WhiteObliqueA'
+}
+
+button:hover {
+	cursor: pointer;
+	background-color: #77919d;
+}
+
+#paging {
+	display: block;
+	text-align: center;
+}

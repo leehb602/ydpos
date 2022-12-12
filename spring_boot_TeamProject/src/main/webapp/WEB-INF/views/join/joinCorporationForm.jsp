@@ -7,7 +7,7 @@
 		<meta charset="UTF-8">
 		<title>법인 회원가입</title>
 		<c:import url="/WEB-INF/views/join/layout/head.jsp"/>
-		<script src="<c:url value='/js/joinCorporation.js' />"></script>	
+		<script src="<c:url value='/js/joinCorporation.js' />"></script>
 	</head>
 	<body>
 	<div class="backimg">

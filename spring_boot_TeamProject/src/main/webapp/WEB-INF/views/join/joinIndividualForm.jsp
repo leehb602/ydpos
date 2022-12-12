@@ -100,7 +100,7 @@
 						<td colspan="2">
 							<div>
 								<label>
-									<select name="gender" id="gender" name="userGender">
+									<select id="gender" name="userGender">
 										<option value="" selected>선택해주세요</option>
 										<option value="남">남</option>
 										<option value="여">여</option>

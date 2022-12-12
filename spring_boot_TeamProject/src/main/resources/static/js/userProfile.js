@@ -8,7 +8,7 @@ $(document).ready(function() {
 	$('.write').show();
 	$btn = $('.btn');
 
-	var menu = ["write", "comment", "set"];
+	var menu = ["write", "comment", "bookmark"];
 	$btn.each(function(index) {
 		$(this).on('click', function() {
 			$('.btn').css('color','#7144A0');

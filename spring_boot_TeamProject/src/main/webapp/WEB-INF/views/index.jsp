@@ -10,6 +10,16 @@
 	<body>
 		<h2>임시페이지</h2>
 		
-		<a href="/join/joinMain">회원가입</a>
+		<c:if test="${empty sessionScope.sid }">
+			<a href="<c:url value='/user/loginForm'/>">로그인</a>
+			<a href="<c:url value='/join/joinMain'/>">회원가입</a>
+		</c:if>
+		<c:if test="${not empty sessionScope.sid }">
+		${sessionScope.suserName}님 환영합니다!
+			<a href="<c:url value='/user/logout'/>">로그아웃</a>
+			<a href="<c:url value='/profile/userProfile/${sessionScope.sid}'/>">유저 프로필</a>
+		</c:if>
+		
+		
 	</body>
 </html>

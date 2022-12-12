@@ -12,23 +12,33 @@ $(document).ready(function() {
 
 	// ID중복확인 버튼을 눌렀을 때,
 	$('#idcheck').on('click', function() {
-		// DB연결 시 수정
-		if ($id.val() == "abcd") {
-			$idEmpty.removeClass('possibility');
-			$idEmpty.text('이미 존재하는 아이디입니다');
-			$idEmpty.addClass('error');
-			$id.focus();
-			return false;
-		} else if ($id.val() == "") {
+		event.preventDefault();
+		if ($id.val() == "") {
 			$idEmpty.removeClass('possibility');
 			$idEmpty.text('아이디를 입력해주세요');
 			$idEmpty.addClass('error');
 			$id.focus();
-			return false;
 		} else {
-			check = 1;
-			$idEmpty.text('사용가능한 아이디입니다');
-			$idEmpty.addClass('possibility');
+			$.ajax({
+			type:"post",
+			url:"idCheck",
+			data:{"userId":$('#id').val()},
+			dataType:"text",
+			success:function(result){
+				if(result == "success"){
+					$idEmpty.text('사용가능한 아이디입니다');
+					$idEmpty.addClass('possibility');
+				}else {
+					$idEmpty.removeClass('possibility');
+					$idEmpty.text('이미 존재하는 아이디입니다');
+					$idEmpty.addClass('error');
+					$id.focus();
+				}
+			},
+			error:function(){
+				alert("실패");
+			}
+		});
 		}
 	})
 
