@@ -1,28 +1,38 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>main 페이지</title>
-		<c:import url="/WEB-INF/views/layout/head.jsp"/> 
+		<title>Main</title>
+		<link rel="stylesheet" type="text/css" href="css/main-style.css">
+		<script src="jquery-3.6.1.min.js"></script>
+		<script src="js/main-script.js"></script>
+		<script src="write/loginpage/modal_login.js"></script>
+		<link rel="stylesheet" type="text/css" href="write/loginpage/modal_login.css"> <!--css불러오기 잊으시면안됩니다 ! 안그럼 작동안해서 애먹었네요-->
 		<style>
-  			 .company a:nth-child(2) {
-  			  color: #274c5e;
- 		   }
+    .company a:nth-child(2) {
+      color: #274c5e;
+    }
 
-   		 .company a:not(.company a:nth-child(2)) {
-     		 color: #77919d;
-   			}
-  		</style>
+    .company a:not(.company a:nth-child(2)) {
+      color: #77919d;
+    }
+  </style>	
 	</head>
 	<body>
 		<div class="background1"></div>
   <div id="wrap">
-    <a href="#" class="top"><img src="<c:url value='/image/top.jpg'/>"></a>
+    <a href="#" class="top"><img src="image/top.jpg"></a>
     <nav>
-     <c:import url="/WEB-INF/views/layout/top.jsp"/>
+      <div class="nav-menu">
+        <div class="company">
+          <a href="main.html"><img data-src="image/logo_winter2.jpg" alt="이미지를 불러오지 못했습니다." class="lozad"></a>
+          <a href="main.html" id="menu-btn">뚜벅뚜벅</a>
+          <a href="찐막 자료 여행기/Record.html" id="menu-btn">여행기</a>
+          <a href="write/_write.html" id="menu-btn">글쓰기</a>
+          <a href="Finall_수정_dy찐막/event_Finall.html" id="menu-btn">공공기관</a>
+        </div>
+        <a id="basic-btn">sign in</a>
+      </div>
     </nav>
     <div class="header">
       <div class="header-wrapper">
@@ -34,15 +44,15 @@
           추천해주고, 여행을 더 구석구석 다녀볼 수 있는 경험자의 노하우와 관광하기 좋은 공공기관의 최신 정보를 제공해드립니다.
         </div>
         <span class="icon">
-          <a href="404.html"><img src="<c:url value='/image/insta.jpg'/>"></a>
-          <a href="404.html"><img src="<c:url value='/image/face.jpg'/>"></a>
-          <a href="404.html"><img src="<c:url value='/image/youtube.jpg'/>"></a>
-          <a href="404.html"><img src="<c:url value='/image/kakao.jpg'/>"></a>
+          <a href="404.html"><img src="image/insta.jpg"></a>
+          <a href="404.html"><img src="image/face.jpg"></a>
+          <a href="404.html"><img src="image/youtube.jpg"></a>
+          <a href="404.html"><img src="image/kakao.jpg"></a>
         </span>
       </div>
       <!--header wrapper 끝 -->
       <div class="header-img">
-        <img data-src="<c:url value='/image/배낭크롭.jpg'/>" alt="이미지를 불러오지 못했습니다." class="lozad">
+        <img data-src="image/배낭크롭.jpg" alt="이미지를 불러오지 못했습니다." class="lozad">
       </div>
     </div> <!-- header 끝 -->
 
@@ -50,14 +60,14 @@
       <div class="article-0">
         <!-- 여기랑 아래 article 메인이랑 띄우기 -->
         <div class="subtitle2-photo">
-          <img data-src="<c:url value='/image/겨울1.jpg'/>" alt="이미지를 불러오지 못했습니다." class="lozad">
+          <img data-src="image/겨울1.jpg" alt="이미지를 불러오지 못했습니다." class="lozad">
 
         </div>
         <div class="subtitle2-photo2">
-          <img data-src="<c:url value='/image/메인-전남순천만정원.jpg'/>" alt="이미지를 불러오지 못했습니다." class="lozad">
+          <img data-src="image/메인-전남순천만정원.jpg" alt="이미지를 불러오지 못했습니다." class="lozad">
         </div>
         <div class="subtitle2-photo3">
-          <img data-src="<c:url value='/image/겨울2.jpg'/>" alt="이미지를 불러오지 못했습니다." class="lozad">
+          <img data-src="image/겨울2.jpg" alt="이미지를 불러오지 못했습니다." class="lozad">
         </div>
         <div class="subtitle2" id="col1">
           우리는 천천히 그리고 흥미롭게<br />곳곳을 탐험하는 것을<br />즐기는 여행자입니다.
@@ -76,7 +86,7 @@
         <div class="box-wrapper">
           <div class="box">
             <div class="box-item-photo">
-              <img data-src="<c:url value='/image/부산더베이.jpg'/>" border="0" alt="이미지를 불러오지 못했습니다." class="lozad"><a href="404.html"></a>
+              <img data-src="image/부산더베이.jpg" border="0" alt="이미지를 불러오지 못했습니다." class="lozad"><a href="404.html"></a>
             </div>
             <div class="box-item-detail">
               <span id="box-header">화려한 야경이 눈부신 부산 더베이 101</span>
@@ -89,7 +99,7 @@
           </div>
           <div class="box">
             <div class="box-item-photo">
-              <img data-src="<c:url value='/image/사려니숲.jpg'/>" border="0" alt="이미지를 불러오지 못했습니다." class="lozad"><a href="404.html"></a>
+              <img data-src="image/사려니숲.jpg" border="0" alt="이미지를 불러오지 못했습니다." class="lozad"><a href="404.html"></a>
             </div>
             <div class="box-item-detail">
               <span id="box-header">요정이 나올 것만 같은 사려니숲</span>
@@ -102,7 +112,7 @@
           </div>
           <div class="box">
             <div class="box-item-photo">
-              <img data-src="<c:url value='/image/순천만습지.jpg'/>" border="0" alt="이미지를 불러오지 못했습니다." class="lozad"><a href="404.html"></a>
+              <img data-src="image/순천만습지.jpg" border="0" alt="이미지를 불러오지 못했습니다." class="lozad"><a href="404.html"></a>
             </div>
             <div class="box-item-detail">
               <span id="box-header">자연 그대로의 습지가 주는 낭만 순천만 습지</span>
@@ -125,7 +135,7 @@
         <div class="box-wrapper">
           <div class="box">
             <div class="box-item-photo">
-              <img data-src="<c:url value='/image/안산방아머리해변.jpg'/>" border="0" alt="이미지를 불러오지 못했습니다." class="lozad"><a
+              <img data-src="image/안산방아머리해변.jpg" border="0" alt="이미지를 불러오지 못했습니다." class="lozad"><a
                 href="404.html"></a>
             </div>
             <div class="box-item-detail">
@@ -139,7 +149,7 @@
           </div>
           <div class="box">
             <div class="box-item-photo">
-              <img data-src="<c:url value='/image/시흥웨이브파크.jpg'/>" border="0" alt="이미지를 불러오지 못했습니다." class="lozad"><a
+              <img data-src="image/시흥웨이브파크.jpg" border="0" alt="이미지를 불러오지 못했습니다." class="lozad"><a
                 href="404.html"></a>
             </div>
             <div class="box-item-detail">
@@ -158,7 +168,7 @@
           </div>
           <div class="box">
             <div class="box-item-photo">
-              <img src="<c:url value='/image/국립수목원.jpg'/>" border="0" alt="이미지를 불러오지 못했습니다." class="lozad"><a href="404.html"></a>
+              <img src="image/국립수목원.jpg" border="0" alt="이미지를 불러오지 못했습니다." class="lozad"><a href="404.html"></a>
             </div>
             <div class="box-item-detail">
               <span id="box-header">북유럽의 숲을 걷는 듯한 포천 국립수목원</span>
@@ -192,10 +202,10 @@
           </span>
           <p></p>
           <span id="h">언제나 업데이트 되는 최신글과 공공기관 정보, 나의 맞춤형 장소까지<br><br>
-            <img src="<c:url value='/image/suko1.jpg'/>">
+            <img src="image/suko1.jpg">
             </span>
           <!--           여기서부터 사진 위에 올릴 회원가입 버튼 -->
-          <div class="container container-one" type="button" id="signupBtn">
+          <div class="container container-one" type="button" onclick="location.href='webapp/joinMain.html'">
             <button>
               뚜벅뚜벅 가입하기
               <div class="fill-one"></div>
@@ -223,19 +233,19 @@
     </div>
     <div class="box-wrapper-last">
       <a href="404.html" class="box-item-photo">
-        <img data-src="<c:url value='/image/감천문화마을.jpg'/>" border="0" alt="이미지를 불러오지 못했습니다." class="lozad">
+        <img data-src="image/감천문화마을.jpg" border="0" alt="이미지를 불러오지 못했습니다." class="lozad">
       </a>
       <a href="404.html" class="box-item-photo">
-        <img data-src="<c:url value='/image/연천호로고루.jpg'/>" border="0" alt="이미지를 불러오지 못했습니다." class="lozad">
+        <img data-src="image/연천호로고루.jpg" border="0" alt="이미지를 불러오지 못했습니다." class="lozad">
       </a>
       <a href="404.html" class="box-item-photo">
-        <img data-src="<c:url value='/image/인제자작나무숲.jpg'/>" border="0" alt="이미지를 불러오지 못했습니다." class="lozad">
+        <img data-src="image/인제자작나무숲.jpg" border="0" alt="이미지를 불러오지 못했습니다." class="lozad">
       </a>
       <a href="404.html" class="box-item-photo">
-        <img data-src="<c:url value='/image/경북_경주_쌈밥.jpg'/>" border="0" alt="이미지를 불러오지 못했습니다." class="lozad">
+        <img data-src="image/경북_경주_쌈밥.jpg" border="0" alt="이미지를 불러오지 못했습니다." class="lozad">
       </a>
       <a href="404.html" class="box-item-photo">
-        <img data-src="<c:url value='/image/김녕해수욕장.jpg'/>" border="0" alt="이미지를 불러오지 못했습니다." class="lozad">
+        <img data-src="image/김녕해수욕장.jpg" border="0" alt="이미지를 불러오지 못했습니다." class="lozad">
       </a>
     </div>
 
@@ -244,7 +254,45 @@
 <!--   </div> -->
 
   <div class="footer">
-		<c:import url="/WEB-INF/views/layout/bottom.jsp"/>
+
+    <div class="footer-box-wrapper" id="wrap">
+      <div class="footer-box">
+        <a href="#"><img data-src="image/logo_winter_end.gif" alt="이미지를 불러오지 못했습니다." class="lozad"></a>
+      </div>
+      <div class="footer-box">
+        <span class="style2">
+          &nbsp;
+          우리의 목표는 문을 박차고 나가면 세상에는 더 많은 것들이 살아 숨 쉬고 있음을 알 수 있도록 돕는 것입니다. 여행은 새로운 아이디어, 문화, 관점,
+          음식에 대한
+          마음을 열어줍니다. 이것은 다른 어떤 것과도 비교할 수 없는 경험입니다! 또한 여정이 최대한 수월할 수 있도록 경험자의 노하우를 원하신다면 저희도 도와드릴 수 있습니다! 당신은 무엇을 기다리고
+          있나요? 오늘부터 발걸음을 떼십시오!
+        </span>
+      </div>
+      <div class="footer-box" id="col1">
+        <span class="style">유용한 문서</span>
+        <p />
+        <span class="style2">
+          <a href="index.html">뚜벅뚜벅</a><br>
+          <a href="#">여행기</a><br>
+          <a href="#">공공기관</a><br>
+          <a href="#">회원가입</a><br>
+          <a href="404.html">사이트맵</a>
+        </span>
+      </div>
+      <div class="footer-box" id="col1">
+        <span class="style">법률 문서</span>
+        <p />
+        <span class="style2">
+          <a href="404.html">이용 약관</a><br>
+          <a href="404.html">개인 정보 정책</a>
+        </span>
+      </div>
+    </div>
+    <div class="style2" id="wrap">© 2022 뚜벅뚜벅. All rights reserved.<a type="button" class="summer" href="404.html"><img
+          data-src="image/season-winter.jpg" class="lozad"></a></div>
+    <br />
+    <p></p>
+    <p></p>
   </div>
 
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
@@ -253,8 +301,73 @@
     observer.observe();
   </script>
 	
-<!-- 여기부터 모달 창 -->
- <c:import url="/WEB-INF/views/layout/login.jsp"/>
- 
+<!--여기부터 사용하신 바디 맨 밑에 넣으시면 됩니다 --><!--여기부터 사용하신 바디 맨 밑에 넣으시면 됩니다 -->
+		
+ <div class="login_container">
+        <img src="write/image/ask.png" id="ask" />
+
+
+        <div class="login">
+            <h2 id="logintitle">
+                <p id="loginlogo"><img src="write/image/santa-hat.png" id="hat">
+                    <img src="write/image/snow-mountain.png" id="mountain">
+                    <img src="write/image/claus1.png" id="claus1">
+                </p>
+            </h2>
+            <div>
+                <div>
+
+                    <table id="logintable">
+                        <tr>
+                            <th colspan="2" class="idpwdfont">아이디 </th>
+                            <td><input type="text" class="idpwd" id="userID"> </td>
+                            <td rowspan="2"><input type="button" class="btn-c" value="login" onclick="location.href='main.html'" /></td>
+
+                        </tr>
+                        <tr>
+                            <th colspan="2" class="idpwdfont">비밀번호</th>
+                            <td><input type="password" class="idpwd" id="userPwd"> </td>
+
+                        </tr>
+
+                    </table>
+                </div>
+                <table id="logintable3">
+                    <tr id="btn-b">
+                        <td><button class="btn-b">회원가입</button></td>
+                    </tr>
+                </table>
+
+
+                <table id="logintable2">
+
+
+                    <tr>
+                        <th class="asktext" >아이디를 잊으셨나요?</th>
+
+                        <td><button class="btn-d">아이디찾기</button></td>
+                    </tr>
+                    <tr>
+                        <th class="asktext">비밀번호를 잊으셨나요?</th>
+
+                        <td><button class="btn-d">비밀번호찾기</button></td>
+                    </tr>
+
+                </table>
+
+                </p>
+            </div>
+        </div>
+
+
+
+
+    </div>
+		
+		
 	</body>
+	
+	
+	
+	
 </html>

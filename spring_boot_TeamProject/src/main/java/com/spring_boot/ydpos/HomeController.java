@@ -9,4 +9,9 @@ public class HomeController {
 	public String index() {
 		return "index";
 	}
+	
+	@RequestMapping("/404")
+	public String error() {
+		return "error";
+	}
 }

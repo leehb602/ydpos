@@ -1,0 +1,244 @@
+.login_container {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.login {
+
+    width: 300px;
+    height: 300px;
+    background: #F2F8F8;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1)
+}
+
+#logintitle {
+    background-color: rgb(219, 232, 232);
+    padding-left: 0px;
+    margin: 0;
+    padding-top: 0px;
+    padding-left: 100;
+    border-radius: 10px;
+    height: 100px;
+    width: 100%;
+
+}
+
+#loginlogo {
+    margin: 0px
+}
+
+.login p {
+    padding: 10px;
+}
+
+#btn-c {
+    border-style: solid;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-left-width: 1px;
+    border-bottom-width: 1px;
+    color: #351e15;
+    border-color: #8d7b74;
+    background-color: rgba(10, 6, 6, 0);
+    border-radius: 4px;
+    padding-top: 14px;
+    padding-right: 22px;
+    padding-bottom: 14px;
+    padding-left: 22px;
+    font-family: '', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    font-size: 0.8125rem;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+#btn-c,
+.btn-c:hover {
+
+    background-color: rgb(196, 196, 196);
+    transition: 0.7s;
+
+}
+
+
+
+#login {
+    top: 0;
+}
+
+
+#joinbtn {
+    display: inline;
+}
+
+#logintext {
+    margin-top: 0px;
+    padding-top: 10px;
+    width: 50%;
+}
+
+.btn-c {
+    border-style: solid;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-left-width: 1px;
+    border-bottom-width: 1px;
+    color: #351e15;
+    border-color: #8d7b74;
+    background-color: rgba(10, 6, 6, 0);
+    border-radius: 4px;
+    padding-top: 8px;
+    padding-right: 11px;
+    padding-bottom: 7px;
+    padding-left: 11px;
+    font-family: '', sans-serif;
+    font-weight: 900;
+    font-size: 10px;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 10px;
+    width: 70px;
+    margin-top: 0px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.idpwd {
+    width: 100px;
+}
+
+#logintable {
+    padding-top: 20px;
+    padding-left: 22px;
+
+
+}
+
+#loginfont1,
+#loginfont2 {
+    font-size: xx-small;
+    background-color: red;
+}
+
+.btn-d,
+.btn-b {
+    border-style: solid;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-left-width: 1px;
+    border-bottom-width: 1px;
+    color: #351e15;
+    border-color: #8d7b74;
+    background-color: rgba(10, 6, 6, 0);
+    border-radius: 4px;
+    padding-top: 3px;
+    padding-right: 0px;
+    padding-bottom: 2px;
+    padding-left: 0px;
+    font-family: '', sans-serif;
+    font-weight: 600;
+    font-size: 1px;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 0px;
+    width: 75px;
+    margin-top: 0px;
+    height: 30px;
+    cursor: pointer;
+
+}
+.btn-b{
+    margin-top: 0px;
+    width: 70px;
+    height: 15px;
+}
+
+#logintable2 {
+    margin:0px;
+    padding-top: 42px;
+    padding-left: 70px;
+    font-size: 1px;
+}
+
+#logintable3 {
+    padding-left: 193px;
+}
+
+.btn-b {
+    padding: 0;
+}
+
+.idpwdfont {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+#ask {
+    width: 25px;
+
+    position: relative;
+    left: 305px;
+    top: 95px;
+    z-index: 1;
+    ;
+
+}
+
+#hat {
+    margin: 0;
+    width: 60px;
+    position: relative;
+    left: 225px;
+    top: 5px;
+    z-index: 1;
+    ;
+}
+
+@font-face {
+    font-family: 'YESMyoungjo-Regular';
+    /* 명조체 */
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_13@1.0/YESMyoungjo-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#mountain {
+    margin: 0;
+    width: 145px;
+    position: relative;
+    left: -40px;
+    top: -37px;
+    z-index: 1;
+    ;
+}
+
+#claus1 {
+    margin: 0;
+    width: 20px;
+    position: relative;
+    left: 20px;
+    top: -100px;
+    z-index: 1;
+    ;
+}
+.asktext{
+    letter-spacing:2px
+    
+}
