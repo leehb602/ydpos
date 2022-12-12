@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="com.spring_boot.ydpos.dao.IUserDAO">
+  	<!-- 회원가입 : 개인회원 정보입력 -->
+  	<insert id="joinIndividaul">
+  		insert into joinUserList(userId, userPw, userName, userEmail, userGender, userHP, userType)
+  		values (#{userId}, #{userPw}, #{userName}, #{userEmail}, #{userGender}, #{userHP}, #{userType})
+  	</insert>
+  	
+  	<!-- 회원가입 : 법인회원 정보입력 -->
+  	<insert id="joinCorporation">
+  		insert into joinUserList(userId, userPw, userName, userHP, userType)
+  		values (#{userId}, #{userPw}, #{userName}, #{userHP}, #{userType})
+  	</insert>
+  	
+  	<!-- 회원가입 : 공공기관 정보입력 -->
+  	<insert id="joinPublic">
+  		insert into joinUserList(userId, userPw, userName, userHP, userType)
+  		values (#{userId}, #{userPw}, #{userName}, #{userHP}, #{userType})
+  	</insert>
+  	
+  	<!-- ID 중복확인 -->
+  	<select id="idCheck" parameterType="string" resultType="string">
+     	select userId
+     	from joinUserList
+     	where userId=#{userId}
+     </select>
+     
+     <!-- 로그인 판별 -->
+     <select id="loginCheck" parameterType="string" resultType="string">
+  		select userPw
+  		from joinUserList
+  		where userId=#{id}
+  	</select>
+  	
+  	<!-- 로그인 시 userNmae 가져오기 -->
+  	<select id="getUserName" parameterType="string" resultType="string">
+  		select userName
+  		from joinUserList
+  		where userId=#{id}
+  	</select>
+  </mapper>

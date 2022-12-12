@@ -1,0 +1,75 @@
+@charset "UTF-8";
+
+@font-face {
+	font-family: 'YESMyoungjo-Regular'; /* 명조체 */
+	src:
+		url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_13@1.0/YESMyoungjo-Regular.woff')
+		format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'LeferiPoint-WhiteObliqueA'; /* 딱딱한 글씨체 */
+	src:
+		url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-WhiteObliqueA.woff')
+		format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+    font-family: 'CookieRunOTF-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/CookieRunOTF-Bold00.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+	margin: 0 auto;
+	font-family: 'LeferiPoint-WhiteObliqueA'
+}
+
+body {
+	background-color: rgba(218, 233, 244, 0.8);
+}
+
+.backimg {
+	margin-top: 10%;
+	padding-top : 2%;
+	padding-bottom : 2%;
+	background-color: rgba(255, 255, 255, 0.8);
+	width: 600px;
+	border-radius: 20px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#wrap {
+	text-align: center;
+}
+
+table {
+	width: 80%;
+}
+
+table tr {
+	height: 100px;
+	line-height: 100px;
+}
+
+button {
+	width : 100px;
+	height: 50px;
+	line-height: 50px;
+	font-weight: bold;
+	border: none;
+	border-radius: 15px;
+	background-color: lightblue;
+	color: #ffffff;
+	font-family: 'LeferiPoint-WhiteObliqueA'
+}
+
+button:hover {
+	cursor: pointer;
+	background-color: #77919d;
+}

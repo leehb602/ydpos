@@ -18,8 +18,6 @@
 		${sessionScope.suserName}님 환영합니다!
 			<a href="<c:url value='/user/logout'/>">로그아웃</a>
 			<a href="<c:url value='/profile/userProfile/${sessionScope.sid}'/>">유저 프로필</a>
-			<a href="<c:url value='/board/showCardListAllView'/>">여행기</a>
-			<a href="<c:url value='/publicE/viewlistAllpublicEvent'/>">공공기관</a>
 		</c:if>
 		
 		
