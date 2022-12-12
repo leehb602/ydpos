@@ -1,0 +1,281 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'YESMyoungjo-Regular'; /* 명조체 */
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_13@1.0/YESMyoungjo-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {   
+    font-family: 'LeferiPoint-WhiteObliqueA'; /* 딱딱한 글씨체 */
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-WhiteObliqueA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/* 글씨 배경색 칼라 */
+#col1{
+    color:#274c5e; 
+}
+#col2{
+    color: #dae9f4;
+}
+#col3{
+    color: #77919d;
+}
+#col4{
+    color: #7f9eb2;
+}
+/* nav box */
+.nav {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .nav-menu {
+    display: flex;
+    max-width: 100%;
+    height: 140px;
+    align-items: center;
+  }
+  .nav-menu {
+    font-family: 'LeferiPoint-WhiteObliqueA';
+    font-weight: bolder;
+    letter-spacing: 1.5px;
+  }
+  #basic-btn {
+    background-color: lightblue;
+    border-radius: 28px;
+        	/* border:1px solid #18ab29;  */
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: 'LeferiPoint-WhiteObliqueA';
+    font-size: 15px;
+    padding: 12px 26px 8px 26px;
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+    letter-spacing: 2px;
+  }
+
+@keyframes jelly {
+  25% {transform: scale(0.9, 1.1);}
+  50% {transform: scale(1.1, 0.9);} 
+  75% {transform: scale(0.95, 1.05);}
+}
+
+  #basic-btn:hover {
+    background-color: skyblue;
+    transition: 0.3s ease-in-out;
+    animation: jelly 0.5s;
+  }
+
+  #basic-btn:active {
+    position: relative;
+    top: 1px;
+  }
+
+  .company {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+  }
+  
+#menu-btn {
+    /*       display: block; */
+    margin-right: 40px;
+    padding: 12px 20px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s ease-in-out;
+  }
+
+  #menu-btn:hover {
+    color: #274c5e;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .company>a>img {
+    width: 100px;
+    height: auto;
+    margin-right: 50px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+ .company >a {
+  text-decoraion:none;
+  } 
+  ​
+/* --------------------------------------------- */
+/* footer */
+html, body {
+    height: 100%;
+    width: 100%;
+  }
+  
+  /* 이 부분 CSS에 넣어주셔야 합니다. */
+  #wrap {
+    margin-left: 140px;
+    margin-right: 140px;
+    position: relative;
+  }
+  
+/* #wrap 속성 값 참조 */
+.footer {
+    border-top: 1px solid lightgray;
+    padding-bottom: 40px;
+    padding-top: 60px;
+    margin-top: 50px;
+  }
+
+  .footer-box-wrapper {
+    display: flex;
+  }
+
+  .footer-box {
+    margin: 10px 50px 10px 0px;
+    width: 350px;
+    height: 300px;
+  }
+
+  .footer-box>a>img {
+    border-radius: 15px;
+  }
+  .style{
+    font-family: 'YESMyoungjo-Regular';
+    font-weight: bold;
+    font-size: 16px;
+  }
+  .style2 {
+    font-size: 13px;
+    color: gray;
+    font-family: 'LeferiPoint-WhiteObliqueA';
+    font-weight: 105px;
+  /*   cursor: pointer; */
+  }
+  
+  .style2 a{
+    text-decoration: none;
+    color: gray;
+  }
+  
+  .summer img {
+    float: right;
+    width: 80px;
+    height: 80px;
+    margin-top: -30px;
+  }
+/* _____________________________________________________ */
+
+
+
+/* title */
+.page_eTitle{
+    color: #274c5e;
+}
+.sub_eTitle{
+    color: #7f9eb2;
+    padding-top: 30px;
+}
+.under_eTitle{
+    color: #77919d;
+    padding-bottom: 30px;
+}
+.eTitleBox {
+    text-align: center;
+    background-color:  #e9f3fa;
+    font-family: 'LeferiPoint-WhiteObliqueA'; 
+}
+/*// title */
+/* Button  */
+.eventBoxMap{
+    display: inline;
+    padding:30px;
+}
+.mapBtn{
+  background-color: #dae9f4;
+  color:#274c5e;
+  border-radius: 5px;
+  border-style: hidden;
+  padding: 7px;
+  font-size: small;
+  margin-bottom: 0.3rem;
+  margin-right: 0.7rem;
+  margin-top:0;
+  float: left;
+  font-weight: bold;
+  padding: 10px;
+}
+.mapBtn:hover {
+    box-shadow: 0 4px 20px 0  #dae9f4;
+    color:#dae9f4;
+    background-color: #274c5e;
+    cursor:pointer;
+}
+#map7{
+    display: none;
+}
+
+.event_container {
+    margin:2rem auto;
+    max-width: calc(100%-80px);
+
+}
+.event_cardBox {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(265px,1fr));
+    gap:2rem;
+}
+.card_image {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.card_image img {
+    max-width: 100%;
+    height: auto;    
+    border-radius: 20px 20px 0 0;
+    aspect-ratio: 13/9;
+
+}
+.event_card {
+    background-color: #e9f3fa;
+    border-radius: 20px;
+    transition: 0.3s;
+    opacity:0.8;
+    border:none;
+    font-family: 'LeferiPoint-WhiteObliqueA'; 
+}
+.event_card:hover {
+    box-shadow: 0 4px 20px 0 #7f9eb2;
+    cursor:pointer;
+    border-radius: 20px;
+    opacity:1;
+    border: 2px solid white;
+    
+}
+
+.card_content {
+  padding:2rem;
+}
+.card_content .card_category {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  color:  #7f9eb2;
+  display: block;
+  text-decoration: none;
+}
+.card_excerpt .card_content {
+  color:#7f9eb2;
+  font-size: 1rem;
+  line-height: 1rem;
+  margin: 0;
+}
+
+.card_title .card_content {
+  color:  #274c5e;
+  margin: 1rem 0;
+}
+
+
