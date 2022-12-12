@@ -19,9 +19,9 @@
         <p />
         <span class="style2">
           <a href="<c:url value='/'/>">뚜벅뚜벅</a><br>
-          <a href="<c:url value='/'/>">여행기</a><br>
-          <a href="<c:url value='/'/>">공공기관</a><br>
-          <a href="<c:url value='/'/>">회원가입</a><br>
+          <a href="<c:url value='/board/showCardListAllView'/>">여행기</a><br>
+	      <a href="<c:url value='/publicE/viewlistAllpublicEvent'/>">공공기관</a><br>
+          <a href="<c:url value='/join/joinMain'/>">회원가입</a><br>
           <a href="/404">사이트맵</a>
         </span>
       </div>

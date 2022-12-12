@@ -10,10 +10,11 @@
 		<c:import url="/WEB-INF/views/publicEvent/layout/head.jsp" />
 	</head>
 	<body> 
+		<!-- warp -->
+		<div id="wrap">	
 		<!--  top -->         
         <c:import url="/WEB-INF/views/publicEvent/layout/top.jsp" /> 
-		<!-- warp -->
-		<div class="wrap">	
+        </div>
 			<div class="eTitleBox">
 				<h5 class="sub_eTitle">SUGGESTED INFO</h5>
 				<h1 class="page_eTitle">뚜벅뚜벅 공공뉴스</h1>
@@ -54,7 +55,6 @@
 						
 				</div>
 			</div>		
-		</div>
 		<!-- //wrap -->
 	 <!--  bottom -->         
 	<c:import url="/WEB-INF/views/publicEvent/layout/bottom.jsp" /> 
