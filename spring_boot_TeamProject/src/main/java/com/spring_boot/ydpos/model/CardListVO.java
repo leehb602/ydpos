@@ -4,10 +4,10 @@ public class CardListVO {
 	private int writeNo;
 	private String writeImg;
 	private String writeCategory;
-	private String cardTitle;
-	private String cardContent;
+	private String writeTitle;
+	private String editordata;
 	private String cardBookmark;
-	private String writeTime;
+	private String writeDate;
 	private String userId;
 	private String userImg;
 	
@@ -29,17 +29,17 @@ public class CardListVO {
 	public void setWriteCategory(String writeCategory) {
 		this.writeCategory = writeCategory;
 	}
-	public String getCardTitle() {
-		return cardTitle;
+	public String getWriteTitle() {
+		return writeTitle;
 	}
-	public void setCardTitle(String cardTitle) {
-		this.cardTitle = cardTitle;
+	public void setWriteTitle(String writeTitle) {
+		this.writeTitle = writeTitle;
 	}
-	public String getCardContent() {
-		return cardContent;
+	public String getEditordata() {
+		return editordata;
 	}
-	public void setCardContent(String cardContent) {
-		this.cardContent = cardContent;
+	public void setEditordata(String editordata) {
+		this.editordata = editordata;
 	}
 	public String getCardBookmark() {
 		return cardBookmark;
@@ -47,11 +47,12 @@ public class CardListVO {
 	public void setCardBookmark(String cardBookmark) {
 		this.cardBookmark = cardBookmark;
 	}
-	public String getWriteTime() {
-		return writeTime;
+	
+	public String getWritedate() {
+		return writeDate;
 	}
-	public void setWriteTime(String writeTime) {
-		this.writeTime = writeTime;
+	public void setWritedate(String writedate) {
+		this.writeDate = writedate;
 	}
 	public String getUserId() {
 		return userId;
@@ -66,6 +67,5 @@ public class CardListVO {
 		this.userImg = userImg;
 	}
 	
-
 	
 }

@@ -86,17 +86,17 @@
 								<img src="<c:url value='/images/${record.writeImg}'/>" />
 							</div>
 							<div class="card_content">
-								<p class="card_area">${record.writeCategory}</p>
-								<h3 class="card_title">${record.cardTitle}</h3>
-								<p class="card_text">${record.cardContent}</p>
+								<p class="card_area">${record.writeCategory}dd</p>
+								<h3 class="card_title">${record.writeTitle}dd</h3>
+								<p class="card_text">${record.editordata}dd</p>
 							</div>
 							<div id="card_subLine">
 								<div>
-									<img src="<c:url value='/images/${record.userImg}'/>" />
-									<span id="record_userName" name="record_userName" value="${userName}" >userName</span>
+									<img id="userImg_record" name="userImg_record" src="<c:url value='/images/${record.userImg}'/>" />
+									<span id="record_userName" name="record_userName">${record.userId}</span>
 								</div>
 								<div>
-									<span id="record_time" ${record.writeTime }>3minute ago..</span>
+									<p id="record_time" name="record_time" >${record.writedate }</p>								
 								</div>
 							</div>
 						</div>

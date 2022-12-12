@@ -8,16 +8,16 @@
   		<result property="writeNo"  column="writeNo"  />
   		<result property="writeImg"  column="writeImg"  />
   		<result property="writeCategory"  column="writeCategory"  />
-  		<result property="cardTitle"  column="cardTitle"  />
-  		<result property="cardContent"  column="cardContent"  />
+  		<result property="writeTitle"  column="writeTitle"  />
+  		<result property="editordata"  column="editordata"  />
   		<result property="cardBookmark"  column="cardBookmark"  />
-  		<result property="writeTime"  column="writeTime"  />
+  		<result property="writeDate"  column="writeDate"  />
   		<result property="userId"  column="userId"  />
   		<result property="userImg"  column="userImg"  />
   	</resultMap>
   	
   	<select id="listAllCard"  resultMap="cardListResult">
-		SELECT * FROM writePage ORDER BY writeNo
+		SELECT * FROM writePage1 ORDER BY writeNo
 	</select> 
   
   	
