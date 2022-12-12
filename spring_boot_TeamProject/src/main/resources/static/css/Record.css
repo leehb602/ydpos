@@ -249,6 +249,14 @@ a {
 
 
 /*************record_main************/
+
+#userImg_record{
+	width: 35px;
+	height: 35px;
+	float: left;
+	margin-left: 20px;
+}
+
 #record_main {
     padding-right: 40px;
     width:65%;
@@ -374,16 +382,16 @@ a {
 }
 
 #record_userName{
-  top: 45%;
-  left: 20%;
-  position: absolute;
+  top: 16%;
+  left: 22%;
   font-size: 1em;
+  position: absolute;
 }
 
 #record_time{
   position: absolute;
   right: 0%;
-  top: 50%;
+  top: 22%;
   font-size: 0.8em;
 }
 
