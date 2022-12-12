@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+    <mapper namespace="com.spring_boot.ydpos.dao.IPublicEventDAO">
+  	<resultMap id="publicEventResult" type="com.spring_boot.ydpos.model.PublicEventVO" >
+  		<result property="ecardNo"  column="ecardNo"  />
+  		<result property="ecardArea"  column="ecardArea"  />
+  		<result property="ecardImgMain"  column="ecardImgMain"  />
+  		<result property="ecardImgDetail"  column="ecardImgDetail"  />
+  		<result property="ecardTitle"  column="ecardTitle"  />
+  		<result property="ecardSubTitle"  column="ecardSubTitle"  />
+  		<result property="ecardText"  column="ecardText"  />
+  		<result property="ecardLink"  column="ecardLink"  />
+  		<result property="userNamePublic"  column="userNamePublic"  />
+  	</resultMap>
+  	
+<!--게시판 메인 -->
+	<select id="listAllPublicevent"  resultMap="publicEventResult">
+	SELECT * FROM publicE ORDER BY ecardNo	
+	</select> 
+	
+<!--게시판 상세  -->
+	<select id="detailViewPublicE" parameterType="string" 
+	resultType="com.spring_boot.ydpos.model.PublicEventVO" >
+	SELECT * FROM publicE WHERE ecardNo = #{ecardNo}	
+	</select>
+	
+	
+	
+	
+<!-- 게시글 삭제  
+  <delete id="deleteBoard" parameterType="string"  >
+  	DELETE FROM publicE WHERE ecardNo = #{ecardNo} 
+  </delete> 
+  해당 게시글을 작성시 유저아이디를 테이블에 저장 게시글 클릭시 id= id 값이 일치하면 상세이미지 히든된 버튼 오픈
+  아니면 버튼 작동은 막아놓고 해당게시글 유저 아이디 id값이 일치하면  삭제 수정버튼 활성화..음... 이건ㄴㄴ
+  -->
+<!-- 게시글 수정 
+	<update id="updateBoard" parameterType="ccom.spring_boot.ydpos.model.PublicEventVO" >
+  	UPDATE publicE
+  	SET ecardTitle=#{ecardTitle},ecardSubTitle=#{ecardSubTitle}  		
+  	WHERE  ecardNo = #{ecardNo}
+  	</update> -->
+
+  </mapper> 
