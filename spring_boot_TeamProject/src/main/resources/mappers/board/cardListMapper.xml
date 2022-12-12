@@ -17,7 +17,7 @@
   	</resultMap>
   	
   	<select id="listAllCard"  resultMap="cardListResult">
-		SELECT * FROM writePage1 ORDER BY writeNo
+		SELECT * FROM writePage ORDER BY writeNo
 	</select> 
   
   	
