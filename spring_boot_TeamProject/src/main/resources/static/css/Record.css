@@ -6,6 +6,12 @@
 #wrap *{
     text-align: center;
 }
+
+#wrap {
+    margin-left: 140px;
+    margin-right: 140px;
+    position: relative;
+  }
 ul, li {
     list-style: none;
 }

@@ -10,9 +10,11 @@
 
 <c:import url="/WEB-INF/views/board/layout/head.jsp" />
 </head>
-<body id="wrap">
+<body>
+	<div id="wrap">
 	<!--  top -->
 	<c:import url="/WEB-INF/views/board/layout/top.jsp" />
+	</div>
 
 	<section>
 	<div id="searchBox" style="width: 1200px">

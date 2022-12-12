@@ -28,15 +28,11 @@
 			} */
 		</script>
 		<style>
-			nav{
-			margin-left: 140px;
-			margin-right: 140px;
-			}
-			.company a:nth-child(5) {
+			.company a:nth-child(4) {
 			color: #274c5e;
 			text-decoration: none;
 			}
-			.company a:not(.company a:nth-child(5)) {
+			.company a:not(.company a:nth-child(4)) {
 			color: #77919d;
 			text-decoration: none;
 			}
