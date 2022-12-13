@@ -13,7 +13,11 @@ public class PublicEventVO {
 	private String ecardSubTitle;
 	private String ecardText;
 	private String ecardLink;
-	private String userNamePublic;
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
+	private Date ecardDate;
+	private String userId;
+	private String ecardview;
+	private String userImg;
 	public String getEcardNo() {
 		return ecardNo;
 	}
@@ -62,11 +66,31 @@ public class PublicEventVO {
 	public void setEcardLink(String ecardLink) {
 		this.ecardLink = ecardLink;
 	}
-	public String getUserNamePublic() {
-		return userNamePublic;
+	public Date getEcardDate() {
+		return ecardDate;
 	}
-	public void setUserNamePublic(String userNamePublic) {
-		this.userNamePublic = userNamePublic;
+	public void setEcardDate(Date ecardDate) {
+		this.ecardDate = ecardDate;
 	}
+	public String getUserId() {
+		return userId;
+	}
+	public void setUserId(String userId) {
+		this.userId = userId;
+	}
+	public String getEcardview() {
+		return ecardview;
+	}
+	public void setEcardview(String ecardview) {
+		this.ecardview = ecardview;
+	}
+	public String getUserImg() {
+		return userImg;
+	}
+	public void setUserImg(String userImg) {
+		this.userImg = userImg;
+	}
+	
+	
 	
 }

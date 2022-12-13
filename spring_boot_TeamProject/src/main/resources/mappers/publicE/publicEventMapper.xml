@@ -13,7 +13,10 @@
   		<result property="ecardSubTitle"  column="ecardSubTitle"  />
   		<result property="ecardText"  column="ecardText"  />
   		<result property="ecardLink"  column="ecardLink"  />
-  		<result property="userNamePublic"  column="userNamePublic"  />
+  		<result property="ecardDate"  column="ecardDate"  />
+  		<result property="userId"  column="userId"  />
+  		<result property="ecardview"  column="ecardView"  />
+  		<result property="userImg"  column="userImg"  />
   	</resultMap>
   	
 <!--게시판 메인 -->
