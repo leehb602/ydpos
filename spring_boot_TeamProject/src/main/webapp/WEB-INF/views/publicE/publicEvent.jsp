@@ -8,6 +8,20 @@
 		<meta charset="UTF-8">
 		<title>공공기관 카드형 게시판</title>
 		<c:import url="/WEB-INF/views/publicEvent/layout/head.jsp" />
+		<link rel="stylesheet" type="text/css" href="<c:url value='/css/publicEvent.css' />">
+		<script src="<c:url value='/js/publicEvent.js' />"></script>
+			<style>
+			.company a:nth-child(4) {
+			color: #274c5e;
+			text-decoration: none;
+			}
+			.company a:not(.company a:nth-child(4)) {
+			color: #77919d;
+			text-decoration: none;
+			}
+			
+		</style>	
+	
 	</head>
 	<body> 
 		<!-- warp -->
