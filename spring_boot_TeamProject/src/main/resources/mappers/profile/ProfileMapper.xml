@@ -6,6 +6,7 @@
   <mapper namespace="com.spring_boot.ydpos.dao.IUserProfileDAO">
   
   	<resultMap id="profileResult" type="com.spring_boot.ydpos.model.UserProfileVO">
+  		<result property="writeNo" column="writeNo" />
   		<result property="writeCategoty" column="writeCategoty" />
   		<result property="writeTitle" column="writeTitle" />
   		<result property="writeDate" column="writeDate" />
@@ -26,7 +27,7 @@
   	</select>
   	
   	<!-- 삭제 시 userId 가져오기 -->
-  	<select id="getUserId" parameterType="string" resultType="string">
+  	<select id="getUserId" parameterType="int" resultType="string">
   		select userId
    		from writePage
    		where writeNo=#{writeNo}
@@ -34,7 +35,7 @@
   	
   	<!-- 프로필 목록 : 작성한 글 -->
   	<select id="userProfile" parameterType="string" resultMap="profileResult">
-  		select writeCategory, writeTitle, writeDate
+  		select writeNo, writeCategory, writeTitle, writeDate
    		from writePage
    		where userId=#{userId}
   	</select>
@@ -47,7 +48,7 @@
   	</update>
   	
   	<!-- 글 삭제 -->
-  	<delete id="writeDelete" parameterType="string">
+  	<delete id="writeDelete" parameterType="int">
   		delete
   		from writePage
   		where writeNo = #{writeNo}

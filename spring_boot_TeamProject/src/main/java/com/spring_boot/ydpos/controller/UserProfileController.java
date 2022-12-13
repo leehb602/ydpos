@@ -18,6 +18,7 @@ public class UserProfileController {
 	@Autowired
 	UserProfileService service;
 	
+	// 유저 프로필 매핑
 	@RequestMapping("/profile/userProfile/{userId}")
 	public String userProfile(@PathVariable String userId, Model model) {
 		ArrayList<UserProfileVO> userList = service.userProfile(userId);
@@ -50,7 +51,7 @@ public class UserProfileController {
 	
 	// 게시글 삭제
 	@RequestMapping("/write/writeDelete/{writeNo}")
-	public String writeDelete(@PathVariable String writeNo) {
+	public String writeDelete(@PathVariable int writeNo) {
 		String userId = service.getUserId(writeNo);
 		service.writeDelete(writeNo);
 		return "redirect:/profile/userProfile/"+userId;

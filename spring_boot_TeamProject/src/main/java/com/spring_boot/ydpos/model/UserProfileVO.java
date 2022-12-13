@@ -5,18 +5,18 @@ import java.util.Date;
 import org.springframework.format.annotation.DateTimeFormat;
 
 public class UserProfileVO {
-	private String writeNo;
+	private int writeNo;
 	private String userId;
 	private String writeCategory;
 	private String writeTitle;
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date writeDate;
 
-	public String getWriteNo() {
+	public int getWriteNo() {
 		return writeNo;
 	}
 
-	public void setWriteNo(String writeNo) {
+	public void setWriteNo(int writeNo) {
 		this.writeNo = writeNo;
 	}
 
