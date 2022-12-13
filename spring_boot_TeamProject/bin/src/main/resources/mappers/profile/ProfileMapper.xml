@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="com.spring_boot.ydpos.dao.IUserProfileDAO">
+  
+  	<resultMap id="profileResult" type="com.spring_boot.ydpos.model.UserProfileVO">
+  		<result property="writeCategoty" column="writeCategoty" />
+  		<result property="writeTitle" column="writeTitle" />
+  		<result property="writeDate" column="writeDate" />
+  	</resultMap>
+  	
+  	<!-- 프로필 userName 가져오기 -->
+  	<select id="getUserName" parameterType="string" resultType="string">
+  		select userName
+   		from joinUserList
+   		where userId=#{userId}
+  	</select>
+  	
+  	<!-- 프로필 userJoinDate 가져오기 -->
+  	<select id="getUserJoinDate" parameterType="string" resultType="date">
+  		select userJoinDate
+   		from joinUserList
+   		where userId=#{userId}
+  	</select>
+  	
+  	<!-- 삭제 시 userId 가져오기 -->
+  	<select id="getUserId" parameterType="string" resultType="string">
+  		select userId
+   		from writePage
+   		where writeNo=#{writeNo}
+  	</select>
+  	
+  	<!-- 프로필 목록 : 작성한 글 -->
+  	<select id="userProfile" parameterType="string" resultMap="profileResult">
+  		select writeCategory, writeTitle, writeDate
+   		from writePage
+   		where userId=#{userId}
+  	</select>
+  	
+  	<!-- 프로필 수정 -->
+  	<update id="userUpdate" parameterType="com.spring_boot.ydpos.model.UserVO">
+  		update joinUserList
+  		set userPw=#{userPw}, userName=#{userName}, userEmail=#{userEmail}, userGender=#{userGender}, userHP=#{userHP}
+  		where userId=#{userId}
+  	</update>
+  	
+  	<!-- 글 삭제 -->
+  	<delete id="writeDelete" parameterType="string">
+  		delete
+  		from writePage
+  		where writeNo = #{writeNo}
+  	</delete>
+  </mapper>

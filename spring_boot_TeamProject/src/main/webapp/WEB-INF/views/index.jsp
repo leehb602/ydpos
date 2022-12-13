@@ -21,7 +21,8 @@
 			<a href="<c:url value='/board/showCardListAllView'/>">여행기</a>
 			<a href="<c:url value='/publicE/viewlistAllpublicEvent'/>">공공기관</a>
 		</c:if>
-		
+		<a href="<c:url value='/board/showCardListAllView'/>">여행기</a>
+			<a href="<c:url value='/publicE/viewlistAllpublicEvent'/>">공공기관</a>
 		
 	</body>
 </html>

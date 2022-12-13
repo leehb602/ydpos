@@ -9,10 +9,10 @@
 	<script src="<c:url value='/js/moreBox.js' />"></script>
 	<script src="<c:url value='/js/nextPage.js' />"></script>
 	<script src="<c:url value='/js/search.js' />"></script>
+	<script src="<c:url value='/js/filter.js' />"></script>
 	<script src="https://kit.fontawesome.com/1d26a052eb.js"
 	crossorigin="anonymous"></script>
 	
-		
 <!-- 		<script src="../write/loginpage/modal_login.js"></script>
 		<link rel="stylesheet" type="text/css" href="../write/loginpage/modal_login.css"> 		
 		<script src="https://kit.fontawesome.com/f31bf33191.js" crossorigin="anonymous"></script>	 -->				

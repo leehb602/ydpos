@@ -1,0 +1,129 @@
+@charset "UTF-8";
+
+@font-face {
+	font-family: 'CookieRunOTF-Bold';
+	src:
+		url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/CookieRunOTF-Bold00.woff')
+		format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+* {
+	margin: 0 auto;
+	font-family: 'CookieRunOTF-Bold';
+}
+
+body {
+	background-color: rgba(218, 233, 244, 0.8);
+}
+
+#wrap {
+	width: 80%;
+	text-align: center;
+	position: relative;
+	background-color: white;
+	opacity: 0.8;
+	border-radius: 20px;
+	margin-top: 2%;
+	margin-bottom: 2%;
+	padding-bottom: 1%;
+}
+
+#profileImg {
+	height: 150px;
+	line-height: 150px;
+	padding-top: 2%;
+}
+
+#name {
+	height: 35px;
+	line-height: 35px;
+}
+
+#name span {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+#joinDate span {
+	font-size: 15px;
+	color: gray;
+}
+
+#MenuBox {
+	height: 70px;
+	line-height: 70px;
+}
+
+#MenuBox ul {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	padding: 10px;
+	padding-top: 15px;
+}
+
+#MenuBox ul li {
+	width: 90%;
+	list-style: none;
+}
+
+#MenuBox ul li a {
+	text-decoration: none;
+	font-size: 20px;
+	font-weight: bold;
+	color: #7144A0;
+}
+
+#contents {
+	height: 500px;
+	background-color: rgba(218, 233, 244, 0.8);
+	border-radius: 20px;
+	margin: 2%;
+}
+
+table {
+	width : 95%;
+}
+
+table tr {
+	height: 50px;
+}
+
+table th {
+	border-bottom : solid 1px;
+}
+
+.category {
+	width: 110px;
+}
+
+.time {
+	width : 130px;
+}
+
+.management {
+	width : 130px;
+}
+
+button {
+	width : 100px;
+	height: 40px;
+	line-height: 40px;
+	font-weight: bold;
+	border: none;
+	border-radius: 15px;
+	background-color: lightblue;
+	color: #ffffff;
+	font-family: 'LeferiPoint-WhiteObliqueA'
+}
+
+button:hover {
+	cursor: pointer;
+	background-color: #77919d;
+}
+
+#paging {
+	display: block;
+	text-align: center;
+}

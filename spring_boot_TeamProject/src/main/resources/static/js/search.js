@@ -2,32 +2,36 @@
  * search.js
  */
 
-$(document).ready(function () {
-  const $message = $("#searchBar");
 
-  $(document).ready(function () {
-    var search = "";
-    $("#Magnifier").on("click", function () {
-      search = $("#searchBar").val();
-      if (search == "") {
-        $(".item").show();
-      } else {
-        $(".item").hide();
-        $(".item[value*=" + search + "]").show();
-      }
-    });
-  });
-
-  $(document).keydown(function (keyNum) {
-    if (keyNum.keyCode == 13) {
-      search = $("#searchBar").val();
-      if (search == "") {
-        $(".item").show();
-      } else {
-        $(".item").hide();
-        $(".item[value*=" + search + "]").show();
-        return false;
-      }
-    }
-  });
+ $(document).ready(function(){
+ 	$('#searchBar').on('submit', function(){ 	
+ 	
+ 		event.preventDefault(); 		
+ 		
+ 		var formData = $(this).serialize();
+		
+		$("#cardBox_event").empty(),
+		
+ 		$.ajax({
+ 			type:"post",
+ 			url:"search",
+ 			data: formData,
+ 			success:function(result){
+ 				$('#cardBox_event').html(result);
+ 			},
+ 			error:function(){
+ 				alert("검색어를 확인해주세요.");
+ 			}
+ 		}); // ajax 종료 	
+ 	});// submit 종료
 });
+
+  
+
+            
+            
+            
+            
+            
+            
+            
