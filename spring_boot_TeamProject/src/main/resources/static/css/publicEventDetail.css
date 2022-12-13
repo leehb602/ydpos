@@ -24,7 +24,8 @@
 #col4{
     color: #7f9eb2;
 }
-/* nav box */
+                       /* nav box */
+                       
 .nav {
     width: 100%;
     margin: 0 auto;
@@ -104,9 +105,13 @@
   }
  .company >a {
   text-decoraion:none;
-  }​
+  }
+  
+  ​
 /* --------------------------------------------- */
-/* footer */
+                           /* footer */
+
+
 html, body {
     height: 100%;
     width: 100%;
@@ -168,14 +173,12 @@ html, body {
 /* ------------------------------------------------------------------ */
 
 /* _____________________________________________________ */
-/* ------------------------------------------------------------------ */
+/* -------------여기부터 choi~ css-------------------------------- */
 
 
-.wrap {
-  padding: 5rem;
-
-} 
- 
+.board_Box{
+	margin-top:50px;
+}
 
 .boardpageDetail {
   position:relative;
@@ -208,7 +211,7 @@ html, body {
 .board_Mainimage {
  
   overflow:hidden;
-  margin-top: -300px;
+  margin-top: -250px;
 }
 /* 3번 */
 .board_Mainimage > img {
@@ -221,11 +224,10 @@ html, body {
 .boardtext {
   position: relative;
   margin-top: -20rem;
-  background-color: #dae9f4;
-  /* border-radius: 2rem; */
+  background-color: #dae9f4; 
   margin-bottom: 1rem;
   padding: 5rem;
-  
+  font-family: 'LeferiPoint-WhiteObliqueA';
 }
 .boardtext .profile-Box{
   display: flex;
@@ -278,10 +280,11 @@ html, body {
   max-height: 60%;
   
 }
-/* ---------------------button------------------- */
+/* --------------------- 밑에 하단 button css -----//////------- */
 
 
 /*   요긴 공공기관 상세페이지~~클릭 링크이동 */
+
 .eventLinkMove {
   position: relative;
   text-align: center;
@@ -423,3 +426,4 @@ html, body {
   
   opacity: 0.8;
 }
+

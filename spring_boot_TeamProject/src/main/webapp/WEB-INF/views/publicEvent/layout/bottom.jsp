@@ -3,7 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <div class="footer-box-wrapper" id="wrap">
       <div class="footer-box">
-        <a href="/"><img data-src="<c:url value='image/logo_winter_end.gif'/>" alt="이미지를 불러오지 못했습니다." class="lozad"></a>
+        <a href="/"><img src="<c:url value='/image/logo_winter_end.gif'/>" alt="이미지를 불러오지 못했습니다." class="lozad"></a>
       </div>
       <div class="footer-box">
         <span class="style2">
@@ -17,11 +17,11 @@
       <div class="footer-box" id="col1">
         <span class="style">유용한 문서</span>
         <p />
-        <span class="style2">
+         <span class="style2">
           <a href="<c:url value='/'/>">뚜벅뚜벅</a><br>
-          <a href="<c:url value='/'/>">여행기</a><br>
-          <a href="<c:url value='/'/>">공공기관</a><br>
-          <a href="<c:url value='/'/>">회원가입</a><br>
+          <a href="<c:url value='/board/showCardListAllView'/>">여행기</a><br>
+	      <a href="<c:url value='/publicE/viewlistAllpublicEvent'/>">공공기관</a><br>
+          <a href="<c:url value='/join/joinMain'/>">회원가입</a><br>
           <a href="/404">사이트맵</a>
         </span>
       </div>
@@ -35,7 +35,7 @@
       </div>
     </div>
     <div class="style2" id="wrap">© 2022 뚜벅뚜벅. All rights reserved.<a type="button" class="summer" href="#">
-    <img data-src="<c:url value='image/season-winter.jpg'/>" class="lozad"></a></div>
+    <img src="<c:url value='/image/season-winter.jpg'/>" class="lozad"></a></div>
     <br />
     <p></p>
     <p></p>
