@@ -45,12 +45,12 @@ public class UserProfileService implements IUserProfileService {
 	}
 
 	@Override
-	public void writeDelete(String writeNo) {
+	public void writeDelete(int writeNo) {
 		dao.writeDelete(writeNo);
 	}
 
 	@Override
-	public String getUserId(String writeNo) {
+	public String getUserId(int writeNo) {
 		return dao.getUserId(writeNo);
 	}
 	

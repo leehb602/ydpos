@@ -12,6 +12,6 @@ public interface IUserProfileDAO {
 	public String getUserName(String userId);
 	public Date getUserJoinDate(String userId);
 	public void userUpdate(UserVO vo);
-	public String getUserId(String writeNo);
-	public void writeDelete(String writeNo);
+	public String getUserId(int writeNo);
+	public void writeDelete(int writeNo);
 }
