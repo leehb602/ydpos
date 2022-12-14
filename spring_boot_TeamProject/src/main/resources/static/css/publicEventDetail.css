@@ -106,7 +106,10 @@
  .company >a {
   text-decoraion:none;
   }
-  
+ .board_Detailimage{
+ 	text-align:center;
+ 	
+ }
   ​
 /* --------------------------------------------- */
                            /* footer */
@@ -131,11 +134,11 @@ html, body {
     padding-top: 60px;
     margin-top: 50px;
   }
-
+	
   .footer-box-wrapper {
     display: flex;
   }
-
+	
   .footer-box {
     margin: 10px 50px 10px 0px;
     width: 350px;
@@ -183,7 +186,10 @@ html, body {
 .boardpageDetail {
   position:relative;
 }
-
+.board_Detailtext{
+	text-aligin:center;
+	font-size:medium;
+}
 .board_titleBox{
   position:relative;
   color:  #274c5e;

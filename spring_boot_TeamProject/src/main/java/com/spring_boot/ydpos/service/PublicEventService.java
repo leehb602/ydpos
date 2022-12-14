@@ -29,4 +29,8 @@ public class PublicEventService implements IPublicEventService {
 		return dao.detailViewPublicE(ecardNo);
 	}
 
+	
+
+	
+
 }

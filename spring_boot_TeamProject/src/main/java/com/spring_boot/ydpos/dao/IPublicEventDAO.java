@@ -7,10 +7,8 @@ import com.spring_boot.ydpos.model.PublicEventVO;
 public interface IPublicEventDAO {
 	public ArrayList<PublicEventVO> listAllPublicevent();
 	public PublicEventVO detailViewPublicE(String ecardNo);
-
+	public void viewCount(PublicEventVO vo);
 	
 	
 	
-//	public void deleteBoard(String ecardNo); 
-//	public void updateBoard(PublicEventVO cdList);
 }

@@ -1,7 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<div class="footer-box-wrapper" id="wrap">
+	
+	<div class="footer-box-wrapper" id="wrap">
       <div class="footer-box">
         <a href="/"><img data-src="<c:url value='image/logo_winter_end.gif'/>" alt="이미지를 불러오지 못했습니다." class="lozad"></a>
       </div>

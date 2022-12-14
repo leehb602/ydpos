@@ -16,7 +16,7 @@ public class PublicEventVO {
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date ecardDate;
 	private String userId;
-	private String ecardview;
+	private String ecardView;
 	private String userImg;
 	public String getEcardNo() {
 		return ecardNo;
@@ -78,11 +78,11 @@ public class PublicEventVO {
 	public void setUserId(String userId) {
 		this.userId = userId;
 	}
-	public String getEcardview() {
-		return ecardview;
+	public String getEcardView() {
+		return ecardView;
 	}
-	public void setEcardview(String ecardview) {
-		this.ecardview = ecardview;
+	public void setEcardView(String ecardView) {
+		this.ecardView = ecardView;
 	}
 	public String getUserImg() {
 		return userImg;
@@ -90,6 +90,7 @@ public class PublicEventVO {
 	public void setUserImg(String userImg) {
 		this.userImg = userImg;
 	}
+	
 	
 	
 	

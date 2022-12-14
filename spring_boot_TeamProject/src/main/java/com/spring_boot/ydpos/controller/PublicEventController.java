@@ -2,6 +2,8 @@ package com.spring_boot.ydpos.controller;
 
 import java.util.ArrayList;
 
+import javax.swing.event.TableColumnModelListener;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -34,32 +36,6 @@ public class PublicEventController {
 		return "publicE/publicEventDetail";
 	}
 	
-	
-	
-	
-	
-	
-	
-//글삭제	
-//	@RequestMapping("/BoardDelete/{ecardNo}")
-//	public String deleteBoard(@PathVariable String ecardNo) {
-//		service.deleteBoard(ecardNo);
-//		return "redirect:/publicE/viewlistAllpublicEvent";
-//	}
-//글수정	
-//	@RequestMapping("/publeE/boardUpdateForm/{ecardNo}")
-//	public String boardUpdateForm(@PathVariable String ecardNo,
-//			  Model model) {
-//		PublicEventVO cdList = service.detailViewPublicE(ecardNo);
-//		model.addAttribute("cdList", cdList);	
-//		return "publicE/boardUpdateForm";
-//	}
-//	
-//	@RequestMapping("/publeE/updateBoard")
-//	public String updateBoard(PublicEventVO cdList) {
-//		service.updateBoard(cdList);
-//		return "redirect:/publicE/viewlistAllpublicEvent";
-//	}
 	
 	
 }

@@ -7,7 +7,7 @@ import com.spring_boot.ydpos.model.PublicEventVO;
 public interface IPublicEventService {
 	public ArrayList<PublicEventVO> listAllPublicevent();
 	public PublicEventVO detailViewPublicE(String ecardNo);
-
+//	public void viewCount(PublicEventVO vo);
 	
 	
 	

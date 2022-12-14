@@ -13,11 +13,5 @@
 				action.classList.toggle('active')
 			}
 			
-			/* function deleteCheck(){
-				var answer = confirm("글 삭제하시겠습니까?");
-				if(answer){
-					location.href="/BoardDelete/${cdList.ecardNo}"
-				}
-			} */
 		</script>
 	

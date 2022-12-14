@@ -22,7 +22,7 @@
   	<select id="getCommentList" parameterType="int" resultMap="mentResult">
   		select *
   		from comments
-  		where writeNo=#{writeNo}
+  		where writeNo=#{writeNo} 
   	</select>
   	
   </mapper>

@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+c<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
@@ -70,8 +70,10 @@
 				</div>
 			</div>		
 		<!-- //wrap -->
-	 <!--  bottom -->         
+	 <!--  bottom --> 
+	 <br><br><hr>      
 	<c:import url="/WEB-INF/views/publicEvent/layout/bottom.jsp" /> 
+	
 	</body>
 </html>
 

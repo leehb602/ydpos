@@ -1,0 +1,149 @@
+@charset "UTF-8";
+
+@font-face {
+	font-family: 'YESMyoungjo-Regular'; /* 명조체 */
+	src:
+		url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_13@1.0/YESMyoungjo-Regular.woff')
+		format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'LeferiPoint-WhiteObliqueA'; /* 딱딱한 글씨체 */
+	src:
+		url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-WhiteObliqueA.woff')
+		format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'CookieRunOTF-Bold';
+	src:
+		url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/CookieRunOTF-Bold00.woff')
+		format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+#commentBoxTable{
+	margin:0;	
+	
+}
+
+table{
+	margin:0;
+	color:#274c5e; 
+	border-top: 1px solid #9c9fa1;
+	border-left:none;
+	border-right:none;
+	border-collapse: collapse;
+	font-family: 'LeferiPoint-WhiteObliqueA';
+	background-color:  #e6f2fa;
+	table-layout:fixed;
+	font-size:small;
+}
+td {
+	padding: 10px;
+	border:none;	
+	}
+	
+td:	nth-child(1){
+	width:60px;
+}
+td:nth-child(2){
+	width:700px;
+}
+td:nth-chlid(3){
+	width:30px;
+} 
+tr{
+	max-width:790px;
+	border-top:1px solid #9c9fa1;
+}
+.upperTable{
+ border-bottom:none;
+
+  
+}
+.upperTable:hover {
+  box-shadow: 0 4px 20px 0  #dae9f4;
+  color:#dae9f4;
+  background-color: #274c5e;
+  cursor:pointer;
+
+	
+}
+
+
+#comment{
+	border-top:none;
+	border-left:none;
+	border-right:none;
+	border-bottom:1px solid #9c9fa1;
+	background-color: #e6f2fa;
+	width:95%;
+}
+		
+#undercomment span{
+	display:block;
+	white-space:normal;
+}
+#commentsBox{
+	padding-left:10rem;
+	padding-right:10rem;
+}
+#registrationBox{
+	padding-left:10rem;
+	padding-right:10rem;
+}
+
+
+#registrationBtn {
+  background-color: #9cb9cd;
+  color:#274c5e;
+  border-radius: 5px;
+  border-style: hidden;
+  padding: 0.5rem;
+  font-size: small;
+  margin: 0.7rem;
+  font-weight: bold;
+  padding: 6px 8px;
+  
+}
+#registrationBtn:hover {
+  box-shadow: 0 4px 20px 0  #dae9f4;
+  color:#dae9f4;
+  background-color: #274c5e;
+  cursor:pointer;
+}
+
+#deleteBtn {
+  background-color: white;
+  color:#274c5e;
+  border-radius: 5px;
+  border-style: hidden;
+  padding: 0.5rem;
+  font-size: small;
+  margin: 0.7rem;
+  display: inline-flex;
+  justify-content: space-between;
+  font-weight: bold;
+  padding: 6px 8px;
+  
+}
+#deleteBtn:hover {
+  box-shadow: 0 4px 20px 0  #dae9f4;
+  color:#dae9f4;
+  background-color: #274c5e;
+  cursor:pointer;
+}
+
+
+
+
+
+
+
