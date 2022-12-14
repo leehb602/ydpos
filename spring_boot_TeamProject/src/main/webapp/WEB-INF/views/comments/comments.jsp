@@ -12,13 +12,13 @@
 		<div id="commentBoxTable">
 			
 			<div id="registrationBox">
-			<table class="upperTable" border="1">
+			<table class="upperTable" >
 				<tr>
-					<td class="left"><input type="hidden" value="${sessionScope.sid }" id="userId">
+					<td class="left_id"><input type="hidden" value="${sessionScope.sid }" id="userId">
 						<input type="hidden" value="1" id="writeNo">
 						${sessionScope.sid }</td>
-					<td class="middle" ><input type="text" id="comment"></td>
-					<td class="right"><input type="button" value="등록" id="registrationBtn"></td>
+					<td class="middle_comment" ><input type="text" id="comment"></td>
+					<td class="right_btn"><input type="button" value="등록" id="registrationBtn"></td>
 				</tr>
 			</table>
 			</div>
@@ -26,5 +26,6 @@
 			<div id="commentsBox">
 			
 			</div>
+			
 		</div>
 
