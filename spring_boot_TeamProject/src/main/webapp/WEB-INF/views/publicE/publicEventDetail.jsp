@@ -6,13 +6,8 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>공공기관 상세페이지</title>
-		                      <!--            //css    시작           -->
-                    
-		<link rel="stylesheet" type="text/css" href="<c:url value='/css/publicEventDetail.css' />">
-		
-	
-		
+		<title>공공기관 상세페이지</title>		
+		<c:import url="/WEB-INF/views/publicE/layout/head_Detail.jsp" />
 		<style>
 			.company a:nth-child(4) {
 			color: #274c5e;
@@ -22,69 +17,16 @@
 			color: #77919d;
 			text-decoration: none;
 			}
-		</style>			
-		                              <!--            //css    끝           -->	
-		<script src="<c:url value='/js/jquery-3.6.1.min.js' />"></script>
-		<script src="<c:url value='/js/publicEventDetail.js' />"></script>
-		
-		<script type="text/javascript">
-			function actionToggle(){
-				var action=document.querySelector('.action');
-				action.classList.toggle('active')
-			}
-			
-		</script>
-          			
+		</style>			        			
 	<head>
-
 	<body>  
-	
-		<!--  top -->         
-      	<style>
-	.userName{
-	 color: #77919d;
-	/*  margin-left:-5px; */
-	}
-	
-	#basic-btn{
-	margin-bottom:6px;
-	}
-	
-	#userIcon{
-	margin-bottom:6px;
-	cursor:pointer;
-	padding-left: 10px;
-	}
-	</style>
-	 <div class="nav-menu">
-    	  <c:if test="${empty sessionScope.sid}">
-    	  <div class="company">
-	          <a href="<c:url value='/'/>"><img src="<c:url value='/image/logo_winter2.jpg'/>" alt="이미지를 불러오지 못했습니다." class="lozad"></a>
-	          <a href="<c:url value='/'/>" id="menu-btn">뚜벅뚜벅</a>
-	          <a href="<c:url value='/board/showCardListAllView'/>" id="menu-btn">여행기</a>
-	          <a href="<c:url value='/publicE/viewlistAllpublicEvent'/>" id="menu-btn">공공기관</a>
-	          <a id="menu-btn" class="loginPrint">글쓰기</a>
-          </div>
-   			<a id="basic-btn" class="signinBtn">sign in</a>
- 		  </c:if>
- 		 
- 		<c:if test="${not empty sessionScope.sid}">
- 		 	<div class="company">
-	          <a href="<c:url value='/'/>"><img src="<c:url value='/image/logo_winter2.jpg'/>" alt="이미지를 불러오지 못했습니다." class="lozad"></a>
-	          <a href="<c:url value='/'/>" id="menu-btn">뚜벅뚜벅</a>
-	          <a href="<c:url value='/board/showCardListAllView'/>" id="menu-btn">여행기</a>
-	          <a href="<c:url value='/publicE/viewlistAllpublicEvent'/>" id="menu-btn">공공기관</a>
-	          <a href="<c:url value='/'/>" id="menu-btn">글쓰기</a>
-          	</div>
-          	<img src="<c:url value='/image/user (3).png'/>"onclick="location.href='/profile/userProfile/${sessionScope.sid }'" width="30"height="30" id="userIcon">
-   			<a href="<c:url value='/profile/userProfile/${sessionScope.sid }'/>" id="menu-btn" class="userName">${sessionScope.suserName }님</a>
-   			<a id="basic-btn" class="signoutBtn">sign out</a>
-        </c:if>
-      </div> 
 		<!-- warp -->
-	
-		<div class="wrap">
-			<div class="board_Box">
+		<div id="wrap">	
+		<!--  top -->         
+        <nav>
+        <c:import url="/WEB-INF/views/publicE/layout/top_Detail.jsp" /> 
+        </nav>			
+        	<div class="board_Box">
 				<div class="boardpageDetail" value="${cdList.ecardArea}">
 					<div class="board_titleBox">				
 						<h3 class="board_title">${cdList.ecardTitle}</h3><br/>
@@ -150,47 +92,13 @@
 					
 		</div>
 		<!-- //wrap --> 
-		
-
-		<!--  bottom -->
-		<br><br><hr>         
-    	<div class="footer-box-wrapper" id="wrap">
-      <div class="footer-box">
-        <a href="/"><img src="<c:url value='/image/logo_winter_end.gif'/>" alt="이미지를 불러오지 못했습니다." class="lozad"></a>
-      </div>
-      <div class="footer-box">
-        <span class="style2">
-          &nbsp;
-          우리의 목표는 문을 박차고 나가면 세상에는 더 많은 것들이 살아 숨 쉬고 있음을 알 수 있도록 돕는 것입니다. 여행은 새로운 아이디어, 문화, 관점,
-          음식에 대한
-          마음을 열어줍니다. 이것은 다른 어떤 것과도 비교할 수 없는 경험입니다! 또한 여정이 최대한 수월할 수 있도록 경험자의 노하우를 원하신다면 저희도 도와드릴 수 있습니다! 당신은 무엇을 기다리고
-          있나요? 오늘부터 발걸음을 떼십시오!
-        </span>
-      </div>
-      <div class="footer-box" id="col1">
-        <span class="style">유용한 문서</span>
-        <p />
-         <span class="style2">
-          <a href="<c:url value='/'/>">뚜벅뚜벅</a><br>
-          <a href="<c:url value='/board/showCardListAllView'/>">여행기</a><br>
-	      <a href="<c:url value='/publicE/viewlistAllpublicEvent'/>">공공기관</a><br>
-          <a href="<c:url value='/join/joinMain'/>">회원가입</a><br>
-          <a href="/404">사이트맵</a>
-        </span>
-      </div>
-      <div class="footer-box" id="col1">
-        <span class="style">법률 문서</span>
-        <p />
-        <span class="style2">
-          <a href="/404">이용 약관</a><br>
-          <a href="/404">개인 정보 정책</a>
-        </span>
-      </div>
-    </div>
-    <div class="style2" id="wrap">© 2022 뚜벅뚜벅. All rights reserved.<a type="button" class="summer" href="#">
-    <img src="<c:url value='/image/season-winter.jpg'/>" class="lozad"></a></div>
-    <br />
-    <p></p>
-    <p></p>    
+	
+	 <!--  bottom --> 
+	 <br><br><hr>      
+	<c:import url="/WEB-INF/views/publicE/layout/bottom.jsp" /> 
+	
 	</body>
 </html>
+
+
+
