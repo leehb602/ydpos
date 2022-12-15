@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="com.spring_boot.ydpos.dao.ICommentsDAO">
+  	<resultMap id="mentResult" type="com.spring_boot.ydpos.model.CommentsVO">
+  		<result property="mentNo" column="mentNo" />
+  		<result property="comment" column="comment" />
+  		<result property="mentDate" column="mentDate" />
+  		<result property="userId" column="userId" />
+  		<result property="writeNo" column="writeNo" />
+  	</resultMap>
+  	
+  	<!-- 댓글 등록 -->
+  	<insert id="insertComments">
+  		insert into comments(comment, userId, writeNo)
+  		values(#{comment}, #{userId}, #{writeNo})
+  	</insert>
+  	
+  	<!-- 댓글 목록 가져오기 -->
+  	<select id="getCommentList" parameterType="int" resultMap="mentResult">
+  		select *
+  		from comments
+  		where writeNo=#{writeNo}
+  	</select>
+  	
+  </mapper>
