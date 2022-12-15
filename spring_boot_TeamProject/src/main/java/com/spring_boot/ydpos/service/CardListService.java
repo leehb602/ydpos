@@ -23,10 +23,42 @@ public class CardListService implements ICardListService {
 		return dao.listAllCard();
 	}
 
+
+
 	@Override
-	public CardListVO detailViewCard(String ecardNo) {
-		return null;
+	public ArrayList<CardListVO> cardSearch(String keyword) {
+		return dao.cardSearch(keyword);
 	}
+
+
+
+	@Override
+	public ArrayList<CardListVO> subSearch(String subKey) {
+		return dao.subSearch(subKey);
+	}
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 }

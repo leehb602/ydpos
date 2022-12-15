@@ -23,11 +23,18 @@ public class CardListVO {
 	public void setWriteImg(String writeImg) {
 		this.writeImg = writeImg;
 	}
+	
 	public String getWriteCategory() {
 		return writeCategory;
 	}
 	public void setWriteCategory(String writeCategory) {
 		this.writeCategory = writeCategory;
+	}
+	public String getWriteDate() {
+		return writeDate;
+	}
+	public void setWriteDate(String writeDate) {
+		this.writeDate = writeDate;
 	}
 	public String getWriteTitle() {
 		return writeTitle;

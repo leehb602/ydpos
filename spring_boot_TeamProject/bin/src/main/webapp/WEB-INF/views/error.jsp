@@ -1,0 +1,76 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+
+<title>페이지 제작 중!</title>
+<style>
+  ::selection{
+  background: #c5eaf7;
+  color: transform;
+  }
+  #basic-btn {
+      background-color: lightblue;
+      border-radius: 28px;
+      /*     	border:1px solid #18ab29; */
+      display: inline-block;
+      cursor: pointer;
+      color: #ffffff;
+      font-family: 'LeferiPoint-WhiteObliqueA';
+      font-size: 15px;
+      padding: 12px 26px 8px 26px;
+      text-decoration: none;
+      transition: 0.2s ease-in-out;
+      letter-spacing: 2px;
+    }
+
+  #basic-btn:hover {
+      background-color: skyblue;
+      transition: 0.3s ease-in-out;
+      animation: jelly 0.5s;
+    }
+
+  #basic-btn:active {
+      position: relative;
+      top: 1px;
+    }
+  
+  @font-face {   
+    font-family: 'LeferiPoint-WhiteObliqueA'; /* 딱딱한 글씨체 */
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-WhiteObliqueA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    }
+  
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'LeferiPoint-WhiteObliqueA';
+      background: #dae9f4;
+      color: #274c5e;
+      height: 100vh;
+      margin: 0;
+      display: grid;
+      place-items: center;
+      padding: 2rem;
+    }
+    main {
+      max-width: 350px;
+    }
+    a {
+      color: #56BBF9;
+    }
+  </style>
+</head>
+<body>
+<main>
+	<img src="<c:url value='/image/404.jpg'/>"width="100"height="100">
+	<h1 data-test-id="text-404">앗! 페이지 제작 중이에요</h1>
+	<p>다음에 뵐게요!</p>
+	<p><a href="<c:url value='/'/>" id="basic-btn">뚜벅뚜벅으로 돌아가기</a></p>
+</main>
+</body>
+</html>
