@@ -9,7 +9,7 @@
  		<result property="writeTitle" column= "writeTitle" />
  		<result property="writeImg" column= "writeImg" />
  		<result property="writeCategory" column= "writeCategory" />
- 		
+ 		<result property="userType" column= "userType" />
  		<result property="editordata" column= "editordata" /> 
  		<result property="writeDate" column= "writeDate" /> 
 
@@ -30,9 +30,14 @@
    			
      			 <!-- 글쓰기 등록 -->
   <insert id="insertwrite" parameterType="com.spring_boot.ydpos.model.writeVO">
-  		INSERT INTO writePage (writeTitle,editordata,writeCategory,userId,filename)
-  		VALUES (#{writeTitle},#{editordata},#{ writeCategory},#{userId},#{filename})
+  		INSERT INTO writePage (writeTitle,writeCategory,editordata,fileName,userType,userId)
+  		VALUES (#{writeTitle},#{ writeCategory},#{editordata},#{fileName},#{userType},#{userId})
   </insert>
   
-
+<!-- 글쓰기 등록에 필요한 유저 타입 반환  -->
+<select id="getUserType" parameterType="string" resultType="string">
+	select userType
+	from joinUserList
+	where userId=#{userId}
+</select>
    </mapper>

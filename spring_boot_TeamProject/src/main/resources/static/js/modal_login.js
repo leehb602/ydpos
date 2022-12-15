@@ -24,6 +24,10 @@ $(document).ready(function () {
     $("#exit_btn").click(function () {
         $(".madal_background").fadeOut();
     })
+    
+    $('#membership_btn').click(function(){
+		$(location).attr('href', '/join/joinMain');
+	});
 	 
 	
 });

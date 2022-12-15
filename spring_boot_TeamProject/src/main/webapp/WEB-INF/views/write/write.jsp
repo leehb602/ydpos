@@ -30,7 +30,7 @@
 
 
 		<div>
-
+			<input type="hidden" value="${sessionScope.sid }" name="userId">
 			<main id="write">
 
 
