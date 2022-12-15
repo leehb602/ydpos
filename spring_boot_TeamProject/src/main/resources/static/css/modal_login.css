@@ -1,4 +1,4 @@
-.login_container {
+.madal_background2 {
     position: absolute;
     background: rgba(0, 0, 0, 0.5);
     left: 0;
@@ -11,73 +11,73 @@
 
 }
 
-.login {
+.madal_background3 {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+
+.madal_background {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.login_window {
 
     width: 300px;
     height: 300px;
-    background: #F2F8F8;
+    background: #ffffff;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 1)
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+
 }
 
-#logintitle {
-    background-color: rgb(219, 232, 232);
-    padding-left: 0px;
-    margin: 0;
-    padding-top: 0px;
-    padding-left: 100;
+#login_top_background {
+    /* background-color: rgb(219, 232, 232); */
     border-radius: 10px;
     height: 100px;
     width: 100%;
 
 }
 
-#loginlogo {
-    margin: 0px
-}
 
-.login p {
-    padding: 10px;
-}
-
-#btn-c {
-    border-style: solid;
-    border-top-width: 1px;
-    border-right-width: 1px;
-    border-left-width: 1px;
-    border-bottom-width: 1px;
-    color: #351e15;
-    border-color: #8d7b74;
-    background-color: rgba(10, 6, 6, 0);
-    border-radius: 4px;
-    padding-top: 14px;
-    padding-right: 22px;
-    padding-bottom: 14px;
-    padding-left: 22px;
-    font-family: '', sans-serif;
-    font-weight: 600;
-    font-size: 13px;
-    font-size: 0.8125rem;
-    line-height: 1;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-top: 10px;
-    cursor: pointer;
-}
-
-#btn-c,
-.btn-c:hover {
+.Login_btn:hover {
 
     background-color: rgb(196, 196, 196);
     transition: 0.7s;
 
 }
 
+.find_btn:hover {
 
+    background-color: rgb(196, 196, 196);
+    transition: 0.7s;
 
-#login {
-    top: 0;
+}
+
+#membership_btn:hover {
+
+    background-color: rgb(196, 196, 196);
+    transition: 0.7s;
+
 }
 
 
@@ -91,24 +91,23 @@
     width: 50%;
 }
 
-.btn-c {
+.Login_btn {
     border-style: solid;
     border-top-width: 1px;
     border-right-width: 1px;
     border-left-width: 1px;
     border-bottom-width: 1px;
-    color: #351e15;
-    border-color: #8d7b74;
+
     background-color: rgba(10, 6, 6, 0);
     border-radius: 4px;
     padding-top: 8px;
     padding-right: 11px;
     padding-bottom: 7px;
     padding-left: 11px;
-    font-family: '', sans-serif;
+
     font-weight: 900;
     font-size: 10px;
-    line-height: 1;
+
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-top: 10px;
@@ -116,99 +115,133 @@
     margin-top: 0px;
     height: 50px;
     cursor: pointer;
+
+    position: relative;
+    left: 170px;
+    top: -50px
 }
 
-.idpwd {
+.InputIdPwd {
     width: 100px;
+
 }
 
-#logintable {
+
+#InputId {
+
+    position: relative;
+    left: 17px;
+    top: -2px
+}
+
+#InputPwd {
+
+    position: relative;
+    left: 3px;
+    top: -2px
+}
+
+
+#loginBox {
     padding-top: 20px;
     padding-left: 22px;
 
-
 }
 
-#loginfont1,
-#loginfont2 {
-    font-size: xx-small;
-    background-color: red;
-}
 
-.btn-d,
-.btn-b {
+.find_btn {
     border-style: solid;
     border-top-width: 1px;
     border-right-width: 1px;
     border-left-width: 1px;
     border-bottom-width: 1px;
-    color: #351e15;
-    border-color: #8d7b74;
     background-color: rgba(10, 6, 6, 0);
     border-radius: 4px;
-    padding-top: 3px;
-    padding-right: 0px;
-    padding-bottom: 2px;
-    padding-left: 0px;
-    font-family: '', sans-serif;
     font-weight: 600;
     font-size: 1px;
-    line-height: 1;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-top: 0px;
-    width: 75px;
-    margin-top: 0px;
-    height: 30px;
+
+    width: 70px;
+    height: 20px;
+    cursor: pointer;
+    position: relative;
+    bottom: 8px;
+    left: 124px;
+    margin: 2px;
+}
+
+
+
+
+#membership_btn {
+    border-style: solid;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-left-width: 1px;
+    border-bottom-width: 1px;
+    background-color: rgba(10, 6, 6, 0);
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 1px;
+    width: 70px;
+    height: 20px;
     cursor: pointer;
 
-}
-.btn-b{
-    margin-top: 0px;
-    width: 70px;
-    height: 15px;
+    display: inline;
+    margin-left: -1px
 }
 
-#logintable2 {
-    margin:0px;
+#B {
+
+    margin-bottom: -46px;
+}
+
+#find_Box {
     padding-top: 42px;
-    padding-left: 70px;
+    padding-left: 65px;
     font-size: 1px;
+
+    padding-top: 0px;
+    position: relative;
+    top: -5px
 }
 
-#logintable3 {
-    padding-left: 193px;
+#membership_Box {
+    position: relative;
+    left: 193px;
+    top: -49px
 }
 
-.btn-b {
-    padding: 0;
-}
-
-.idpwdfont {
-    text-transform: uppercase;
+.PwdBox {
     font-weight: 600;
     font-size: 16px;
+    display: flex
+}
+
+.IdBox {
+    font-weight: 600;
+    font-size: 16px;
+    display: flex;
+    margin-bottom: 5px;
+
+
 }
 
 #ask {
     width: 25px;
-
     position: relative;
     left: 305px;
     top: 95px;
     z-index: 1;
-    ;
-
 }
 
 #hat {
     margin: 0;
     width: 60px;
     position: relative;
-    left: 225px;
-    top: 5px;
+    left: 231px;
+    top: 8px;
     z-index: 1;
-    ;
+
 }
 
 @font-face {
@@ -221,12 +254,11 @@
 
 #mountain {
     margin: 0;
-    width: 145px;
+    width: 190px;
     position: relative;
-    left: -40px;
-    top: -37px;
+    left: 67px;
+    top: -27px;
     z-index: 1;
-    ;
 }
 
 #claus1 {
@@ -236,9 +268,121 @@
     left: 20px;
     top: -100px;
     z-index: 1;
-    ;
 }
-.asktext{
-    letter-spacing:2px
-    
+
+
+
+#find_id {
+    letter-spacing: 2px;
+
+    position: relative;
+    top: 50px;
+    left: 5px;
+}
+
+#find_pwd {
+    letter-spacing: 2px;
+
+    position: relative;
+    top: -10px;
+
+}
+
+
+#id {
+    position: relative;
+    left: 6px;
+}
+
+#exit {
+    position: relative;
+    left: 302px;
+    top: -18px;
+    border-radius: 3px;
+    padding-bottom: 0px;
+
+}
+
+#exit_btn {
+    border-style: solid;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-left-width: 1px;
+    border-bottom-width: 1px;
+    background-color: rgba(10, 6, 6, 0);
+    border-radius: 10px;
+    background-color: rgba(254, 26, 26, 0.778);
+    font-size: 1px;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    padding-left: 3px;
+    padding-bottom: 4px;
+    border: 2px solid black;
+
+}
+
+#exit_btn:hover {
+    background-color: red;
+    transition: 0.7s;
+
+}
+
+#exit_btn2 {
+    border-style: solid;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-left-width: 1px;
+    border-bottom-width: 1px;
+    background-color: rgba(10, 6, 6, 0);
+    border-radius: 10px;
+    background-color: rgba(254, 26, 26, 0.778);
+    font-size: 1px;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    padding-left: 3px;
+    padding-bottom: 4px;
+    border: 2px solid black;
+
+}
+
+#exit_btn2:hover {
+    background-color: red;
+    transition: 0.7s;
+
+}
+#exit_btn3 {
+    border-style: solid;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-left-width: 1px;
+    border-bottom-width: 1px;
+    background-color: rgba(10, 6, 6, 0);
+    border-radius: 10px;
+    background-color: rgba(254, 26, 26, 0.778);
+    font-size: 1px;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    padding-left: 3px;
+    padding-bottom: 4px;
+    border: 2px solid black;
+
+}
+
+#exit_btn3:hover {
+    background-color: red;
+    transition: 0.7s;
+
+}
+
+.find_text {
+    position: relative;
+    letter-spacing: 2px;
+    top: 12px
+}
+
+#id_find_text {
+    left: 4px;
 }

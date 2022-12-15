@@ -9,8 +9,13 @@
 	<script src="<c:url value='/js/moreBox.js' />"></script>
 	<script src="<c:url value='/js/nextPage.js' />"></script>
 	<script src="<c:url value='/js/search.js' />"></script>
+	
 	<script src="https://kit.fontawesome.com/1d26a052eb.js"
 	crossorigin="anonymous"></script>
+	
+	
+<!-- 모달 -->
+	<script src="<c:url value='js/modal_login.js'/>"></script>
 	
 		
 <!-- 		<script src="../write/loginpage/modal_login.js"></script>
