@@ -6,4 +6,3 @@
 		<script src="<c:url value='js/jquery-3.6.1.min.js'/>"></script>
 		<script src="<c:url value='js/main-script.js'/>"></script>
 		<script src="<c:url value='js/modal_login.js'/>"></script>
-	

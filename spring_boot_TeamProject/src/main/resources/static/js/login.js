@@ -3,7 +3,7 @@
  */
  
  $(document).ready(function() {
- 	$('#loginBtn').on('click',function() {
+ 	$('.Login_btn').on('click',function() {
 	// 폼이 submit 되지 않도록 기본 기능 중단
 	event.preventDefault();
 	
