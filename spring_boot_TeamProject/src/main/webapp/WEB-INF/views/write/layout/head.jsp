@@ -12,6 +12,7 @@
 <script src="<c:url value='js/login_modal.js'/>"></script>
 <script src="<c:url value='js/login_modal2.js'/>"></script>
 <script src="<c:url value='js/editer2.js'/>"></script>
+<script src="<c:url value='js/main-script.js'/>"></script>
 
 
 <!-- 글쓰기 에디터  --><!-- 글쓰기 에디터 --><!-- 글쓰기 에디터 --><!-- 글쓰기 에디터 --><!-- 글쓰기 에디터 --><!-- 글쓰기 에디터 -->

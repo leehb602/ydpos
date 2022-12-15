@@ -1,3 +1,40 @@
+table {
+	width: 100%;
+}
+
+#exit_btn {
+	float: right;
+}
+
+.idpw {
+	height: 30px;
+	line-height: 30px;
+}
+
+.idpwtitle {
+	width: 70px;
+}
+
+.findTitle{
+	font-size: 11px;
+	width: 200px;
+}
+
+#subTable {
+	margin-top: 5%;
+}
+
+#login_join_td {
+	text-align: right;
+}
+
+/* 위로부터 임시 */
+
+#login_join {
+	position : relative;
+	border: solid 1px red;
+}
+
 .madal_background2 {
     position: absolute;
     background: rgba(0, 0, 0, 0.5);
@@ -40,9 +77,8 @@
 }
 
 .login_window {
-
     width: 300px;
-    height: 300px;
+    height: 330px;
     background: #ffffff;
     padding: 20px;
     border-radius: 10px;
@@ -60,10 +96,8 @@
 
 
 .Login_btn:hover {
-
     background-color: rgb(196, 196, 196);
     transition: 0.7s;
-
 }
 
 .find_btn:hover {
@@ -115,20 +149,17 @@
     margin-top: 0px;
     height: 50px;
     cursor: pointer;
-
-    position: relative;
-    left: 170px;
-    top: -50px
 }
 
 .InputIdPwd {
     width: 100px;
-
 }
 
+.idpwInput {
+	width:130px;
+}
 
 #InputId {
-
     position: relative;
     left: 17px;
     top: -2px
@@ -143,9 +174,8 @@
 
 
 #loginBox {
-    padding-top: 20px;
+    padding-top: 30px;
     padding-left: 22px;
-
 }
 
 
@@ -160,13 +190,12 @@
     font-weight: 600;
     font-size: 1px;
 
-    width: 70px;
+    width: 80px;
     height: 20px;
     cursor: pointer;
     position: relative;
-    bottom: 8px;
-    left: 124px;
     margin: 2px;
+    float: right;
 }
 
 
@@ -214,7 +243,8 @@
 .PwdBox {
     font-weight: 600;
     font-size: 16px;
-    display: flex
+    display: flex;
+    width : 180px;
 }
 
 .IdBox {
@@ -222,8 +252,7 @@
     font-size: 16px;
     display: flex;
     margin-bottom: 5px;
-
-
+    width : 180px;
 }
 
 #ask {
@@ -296,11 +325,8 @@
 
 #exit {
     position: relative;
-    left: 302px;
+    padding-left: 300px;
     top: -18px;
-    border-radius: 3px;
-    padding-bottom: 0px;
-
 }
 
 #exit_btn {

@@ -4,14 +4,17 @@ import java.io.File;
 import java.io.IOException;
 import java.util.UUID;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.spring_boot.ydpos.model.WriteService;
 import com.spring_boot.ydpos.model.writeVO;
+import com.spring_boot.ydpos.service.WriteService;
 
 @Controller
 public class WriteController {
@@ -26,40 +29,39 @@ public String writpage() {
 
 
 @RequestMapping("/write2") // 게시글 등록
-public String insertwrite(writeVO vo, @RequestParam("environment")String environment,
-																@RequestParam("area")String area,
-																@RequestParam("theme")String theme,
-																@RequestParam("group")String group,
-																@RequestParam("writeImg")MultipartFile file) throws IOException{
-//																@ModelAttribute writeVO writeVO )
-	
-	
-	vo.setUserId("sim");
-	vo.setWriteCategory(environment+"/"+area+"/"+theme+"/"+group);
-//	vo.getWriteImg()
-	
+public String insertwrite(writeVO vo, 
+						  @RequestParam("environment") String environment,
+						  @RequestParam("area") String area,
+						  @RequestParam("theme") String theme,
+						  @RequestParam("group") String group,
+						  @RequestParam("writeImg") MultipartFile file,
+						  HttpSession session) throws IOException {
+//	@ModelAttribute writeVO writeVO )
 
-	String uploadPath = "/Users/shimgyumin/git/gm/spring_boot_TeamProject/src/main/resources/static/files/";
-	
+	vo.setUserId(vo.getUserId());
+	vo.setWriteCategory(environment + "/" + area + "/" + theme + "/" + group);
+//	vo.getWriteImg()
+
+	String uploadPath = "C:/springWorkspace/upload/";
 
 	UUID uuid = UUID.randomUUID();
-	
 
 	String fileName = uuid.toString() + "_" + file.getOriginalFilename();
 
-	
 	File saveFile = new File(uploadPath + fileName);
-	
+
 	file.transferTo(saveFile);
+
+	vo.setFileName(fileName);
+
+	System.out.println("_" + vo.getWriteNo());
 	
-	vo.setFilename(fileName);
-	
-	System.out.println("_"+vo.getWriteNo());
-	
+	vo.setUserType(service.getUserType(vo.getUserId()));
+
 	service.insertwrite(vo);
-	
-	return "";
-} 
+
+	return "/";
+}
 
 //@RequestMapping("/")
 //	public String ctg(@RequestParam("environment")String environment,
