@@ -10,6 +10,8 @@
   		<result property="writeCategoty" column="writeCategoty" />
   		<result property="writeTitle" column="writeTitle" />
   		<result property="writeDate" column="writeDate" />
+  		<result property="comment" column="comment" />
+  		<result property="mentDate" column="mentDate" />
   	</resultMap>
   	
   	<!-- 프로필 userName 가져오기 -->
@@ -38,6 +40,13 @@
   		select writeNo, writeCategory, writeTitle, writeDate
    		from writePage
    		where userId=#{userId}
+  	</select>
+  	
+  	<!-- 프로필 목록 : 작성한 댓글 -->
+  	<select id="userMent" parameterType="string" resultMap="profileResult">
+  		select c.comment, c.mentDate, w.writeTitle
+		from comments c, writePage w
+		where c.writeNo = w.writeNo AND c.userId=#{userId};
   	</select>
   	
   	<!-- 프로필 수정 -->

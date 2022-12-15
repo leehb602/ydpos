@@ -11,4 +11,7 @@ public interface ICommentsDAO {
 	
 	// 댓글 목록 호출
 	public ArrayList<CommentsVO> getCommentList(int writeNo);
+	
+	// 댓글 삭제
+	public void deleteComments(String mentNo);
 }

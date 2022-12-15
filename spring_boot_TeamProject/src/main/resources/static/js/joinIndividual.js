@@ -44,6 +44,7 @@ $(document).ready(function() {
 
 	// 가입하기 버튼을 눌렀을 때,
 	$('#joinBtn').on('click', function() {
+		event.preventDefault();
 		if ($id.val() == "") {
 			$idEmpty.text('아이디를 입력해주세요');
 			$idEmpty.addClass('error');
@@ -106,7 +107,7 @@ $(document).ready(function() {
 	})
 
 	$('#consent').on('click', function() {
-		window.location.href = "";
+		location.href = "#";
 	});
 
 	$('#hp1').on('keyup', function() {

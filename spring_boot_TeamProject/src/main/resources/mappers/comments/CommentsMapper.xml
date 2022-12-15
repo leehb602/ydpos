@@ -25,4 +25,10 @@
   		where writeNo=#{writeNo}
   	</select>
   	
+  	<!-- 댓글 삭제 -->
+  	<delete id="deleteComments" parameterType="string">
+  		delete
+  		from comments
+  		where mentNo=#{mentNo}
+  	</delete>
   </mapper>

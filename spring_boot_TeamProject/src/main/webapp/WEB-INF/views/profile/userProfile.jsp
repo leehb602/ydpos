@@ -52,7 +52,7 @@
 	            					<td class="category">${user.writeCategory }</td>
 	            					<td>${user.writeTitle }</td>
 	            					<td class="time"><fmt:formatDate value='${user.writeDate }' pattern="yyyy-MM-dd"/></td>
-	            					<td><a href="<c:url value='/write/writeDelete/${user.writeNo}'/>"><button>삭제</button></a></td>
+	            					<td><a href="<c:url value='/write/writeDelete/${user.writeNo}'/>"><button id="deleteBtn">삭제</button></a></td>
 	            				</tr>
             				</c:forEach>
             			</table>
@@ -60,15 +60,17 @@
             		<div class="menu comment">
             			<table>
             				<tr>
-            					<th class="category">카테고리</th>
-            					<th>글 제목</th>
+            					<th class="category">글 제목</th>
+            					<th>댓글 내용</th>
             					<th class="time">작성날짜</th>
             				</tr>
-            				<tr>
-            					<td>여행/잡담</td>
-            					<td>와 정말 재밌으셨겠다~~</td>
-            					<td>3시간 전</td>
-            				</tr>
+            				<c:forEach var="ment" items="${mentList }">
+	            				<tr>
+	            					<td class="category">${ment.writeTitle }</td>
+	            					<td>${ment.comment }</td>
+	            					<td class="time"><fmt:formatDate value='${ment.mentDate }' pattern="yyyy-MM-dd"/></td>
+	            				</tr>
+            				</c:forEach>
             			</table>
             		</div>
             		<div class="menu bookmark">

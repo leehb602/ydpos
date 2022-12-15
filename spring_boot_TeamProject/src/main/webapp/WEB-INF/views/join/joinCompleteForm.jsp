@@ -24,8 +24,7 @@
 						</td>
 					</tr>
 					<tr>
-						<td><a href="<c:url value='/'/>"><button>홈으로 이동</button></a></td>
-						<td><a href="<c:url value='/join/loginForm'/>"><button>로그인</button></a></td>
+						<td colspan="2"><a href="<c:url value='/'/>"><button>홈으로 이동</button></a></td>
 					</tr>
 				</table>
 			</div>

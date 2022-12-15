@@ -87,7 +87,11 @@ $(document).ready(function() {
 
 	$("#YorN").click(function() {
 		$modal.fadeOut();
-	})
+	});
+	
+	$('#consent').on('click',function(){
+		location.href = "#";
+	});
 
 	$('#hp1').on('keyup', function() {
 		if ($(this).val().length == 3) {
