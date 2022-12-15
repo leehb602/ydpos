@@ -18,12 +18,12 @@
   	
   	<!-- 여행기 전체 보기 -->
   	<select id="listAllCard"  resultMap="cardListResult">
-		SELECT * FROM writePage1 ORDER BY writeNo DESC
+		SELECT * FROM writePage ORDER BY writeNo DESC	
 	</select> 
   
      <!-- 검색 결과 보기  -->
   <select id="cardSearch" parameterType="string" resultMap="cardListResult">
-  		SELECT * FROM writePage1 WHERE
+  		SELECT * FROM writePage WHERE
   		writeTitle Like CONCAT('%', #{keyword}, '%') 
   		OR editordata Like CONCAT('%', #{keyword}, '%') 
   		OR writeCategory Like CONCAT('%', #{keyword}, '%')
@@ -31,7 +31,7 @@
   
   	<!-- 서브 필터 결과 보기 -->
   <select id="subShowFilter" parameterType="string" resultMap="cardListResult">
-  		Select * from writePage1 where
+  		Select * from writePage where
   		writeCategory like concat('%', #{subKey}, '%')
   </select>
   	

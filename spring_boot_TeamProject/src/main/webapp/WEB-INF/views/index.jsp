@@ -6,6 +6,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>main 페이지</title>
+		<script src="<c:url value='js/main.js'/>"></script>
 		<c:import url="/WEB-INF/views/layout/head.jsp"/> 
 		<style>
   			 .company a:nth-child(2) {
@@ -34,10 +35,10 @@
           추천해주고, 여행을 더 구석구석 다녀볼 수 있는 경험자의 노하우와 관광하기 좋은 공공기관의 최신 정보를 제공해드립니다.
         </div>
         <span class="icon">
-          <a href="404.html"><img src="<c:url value='/image/insta.jpg'/>"></a>
-          <a href="404.html"><img src="<c:url value='/image/face.jpg'/>"></a>
-          <a href="404.html"><img src="<c:url value='/image/youtube.jpg'/>"></a>
-          <a href="404.html"><img src="<c:url value='/image/kakao.jpg'/>"></a>
+          <a href="/404"><img src="<c:url value='/image/insta.jpg'/>"></a>
+          <a href="/404"><img src="<c:url value='/image/face.jpg'/>"></a>
+          <a href="/404"><img src="<c:url value='/image/youtube.jpg'/>"></a>
+          <a href="/404"><img src="<c:url value='/image/kakao.jpg'/>"></a>
         </span>
       </div>
       <!--header wrapper 끝 -->
@@ -74,46 +75,21 @@
           <span>지금 가장 인기의</span>
         </div>
         <div class="box-wrapper">
+        <c:forEach var="hits" items="${hitsView}">
           <div class="box">
             <div class="box-item-photo">
-              <img data-src="<c:url value='/image/부산더베이.jpg'/>" border="0" alt="이미지를 불러오지 못했습니다." class="lozad"><a href="404.html"></a>
+              <img data-src="<c:url value='/image/${hits.ecardImgDetail }'/>" border="0" alt="이미지를 불러오지 못했습니다." class="lozad"><a href="/event_card/${hits.ecardNo}"></a>
             </div>
             <div class="box-item-detail">
-              <span id="box-header">화려한 야경이 눈부신 부산 더베이 101</span>
+              <span id="box-header">${hits.ecardTitle }</span><!-- 화려한 야경이 눈부신 부산 더베이 101 -->
               <p></p>
-              한국 대표 야경 명소로 손꼽히는 부산 해운대. 그런 해운대에서도 가장 화려한 야경을 볼 수 있는 곳이 바로 더베이 101이에요. 고층 빌딩의 조명 자체도 아름답지만, 해운대 앞바다에 반사된
+              ${hits.ecardText }
+              <!-- 한국 대표 야경 명소로 손꼽히는 부산 해운대. 그런 해운대에서도 가장 화려한 야경을 볼 수 있는 곳이 바로 더베이 101이에요. 고층 빌딩의 조명 자체도 아름답지만, 해운대 앞바다에 반사된
               빛으로 더욱 눈부신 해운대의 야경은 사진으로 다 담아낼 수 없을 정도로 환상적이에요. 맞은편의 동백섬 누리마루 역시 아름다운 야경으로 유명하답니다. 해운대의 낭만적인 밤을 만끽하고 싶은
-              사람이라면 꼭 방문해 보세요.
+              사람이라면 꼭 방문해 보세요. -->
             </div>
-
           </div>
-          <div class="box">
-            <div class="box-item-photo">
-              <img data-src="<c:url value='/image/사려니숲.jpg'/>" border="0" alt="이미지를 불러오지 못했습니다." class="lozad"><a href="404.html"></a>
-            </div>
-            <div class="box-item-detail">
-              <span id="box-header">요정이 나올 것만 같은 사려니숲</span>
-              <p></p>
-              무성한 숲속 붉은 숲길이 인상적인 사려니숲길은 피톤치드 가득한 힐링 명소죠. 맑은 날 빼곡한 나뭇잎 사이로 비추는 햇살이 반짝이는 모습도 환상적이지만, 비 오는 날이면 피어오르는 물안개
-              덕분에 마치 요정이 나올 것처럼 신비로운 분위기를 자아내요. 자연의 소리를 들으며 아이와 함께 걸어도 좋은 완만한 숲을 걸으며 동심으로 돌아가 보세요. 사진을 찍으면 매 순간이 즐거웠던
-              사려니 숲 산책이 더욱 오랫동안 기억에 남을 거예요.
-            </div>
-
-          </div>
-          <div class="box">
-            <div class="box-item-photo">
-              <img data-src="<c:url value='/image/순천만습지.jpg'/>" border="0" alt="이미지를 불러오지 못했습니다." class="lozad"><a href="404.html"></a>
-            </div>
-            <div class="box-item-detail">
-              <span id="box-header">자연 그대로의 습지가 주는 낭만 순천만 습지</span>
-              <p></p>
-              <span id="box-information">
-                깨끗한 자연을 그대로 보전하고 있어 매년 수많은 철새가 찾는 곳이기도 한 순천만 습지는 언제 찾아도 운치 있는 모습이 매력이에요. 특히 해 질 녘이면 시시각각 변하는 넓은 갈대밭을 보고
-                있으면 어쩐지 현실이 아니라 꿈을 꾸고 있는 것만 같아요. 이때 전망대에 오르면 노을로 붉게 물든 습지 위를 철새 떼가 나는 그림 같은 풍경도 만날 수 있답니다. 걷기 편하게 데크가
-                조성되어 있어 아이들은 물론 어른들도 편안하게 둘러볼 수 있는 이곳은 언제 찾아도 좋은 휴식 공간이에요.</span>
-            </div>
-
-          </div>
+          </c:forEach>
         </div>
       </div>
 
@@ -219,24 +195,14 @@
       <div class="box-title" id="col1">
         <span>지금 가장 최신의</span>
       </div>
-      <div class="last-align-button"><a href="찐막 자료 여행기/Record.html" id="btn2">more</a></div>
+      <div class="last-align-button"><a href="/board/showCardListAllView" id="btn2">more</a></div>
     </div>
     <div class="box-wrapper-last">
-      <a href="404.html" class="box-item-photo">
-        <img data-src="<c:url value='/image/감천문화마을.jpg'/>" border="0" alt="이미지를 불러오지 못했습니다." class="lozad">
+    <c:forEach var="rv" items="${recentView}">
+      <a href="/event_card/${rv.ecardNo}" class="box-item-photo">
+        <img data-src="<c:url value='/image/${rv.ecardImgDetail}'/>" border="0" alt="이미지를 불러오지 못했습니다." class="lozad">
       </a>
-      <a href="404.html" class="box-item-photo">
-        <img data-src="<c:url value='/image/연천호로고루.jpg'/>" border="0" alt="이미지를 불러오지 못했습니다." class="lozad">
-      </a>
-      <a href="404.html" class="box-item-photo">
-        <img data-src="<c:url value='/image/인제자작나무숲.jpg'/>" border="0" alt="이미지를 불러오지 못했습니다." class="lozad">
-      </a>
-      <a href="404.html" class="box-item-photo">
-        <img data-src="<c:url value='/image/경북_경주_쌈밥.jpg'/>" border="0" alt="이미지를 불러오지 못했습니다." class="lozad">
-      </a>
-      <a href="404.html" class="box-item-photo">
-        <img data-src="<c:url value='/image/김녕해수욕장.jpg'/>" border="0" alt="이미지를 불러오지 못했습니다." class="lozad">
-      </a>
+      </c:forEach>
     </div>
 
   </div>

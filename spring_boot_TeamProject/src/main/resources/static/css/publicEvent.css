@@ -11,6 +11,11 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face { font-family: 'NanumBarunGothic';
+src: url('/fonts/NanumBarunGothic.eot');
+src: url('/fonts/NanumBarunGothic.eot') format('embedded-opentype'),
+url('/fonts/NanumBarunGothic.woff') format('woff');
+}
 /* 글씨 배경색 칼라 */
 #col1{
     color:#274c5e; 
@@ -208,6 +213,7 @@ body {
   float: left;
   font-weight: bold;
   padding: 10px;
+  font-family: 'NanumBarunGothic', 'serif'; 
 }
 .mapBtn:hover {
     box-shadow: 0 4px 20px 0  #dae9f4;
@@ -247,7 +253,8 @@ body {
     transition: 0.3s;
     opacity:0.8;
     border:none;
-    font-family: 'LeferiPoint-WhiteObliqueA'; 
+    font-family: 'LeferiPoint-WhiteObliqueA';
+	 
 }
 .event_card:hover {
     box-shadow: 0 4px 20px 0 #7f9eb2;
@@ -278,8 +285,8 @@ body {
 }
 
 .card_title .card_content {
-  color:  #274c5e;
+  color:  #386f8a;
   margin: 1rem 0;
 }
 
-
+.card_content 

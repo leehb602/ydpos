@@ -6,12 +6,6 @@
 #wrap *{
     text-align: center;
 }
-
-#wrap {
-    margin-left: 140px;
-    margin-right: 140px;
-    position: relative;
-  }
 ul, li {
     list-style: none;
 }
@@ -145,9 +139,9 @@ a {
 #Magnifier{
     color: black;
     position: absolute;
-    right: 55px;
+    right: 75px;
     font-size: 25px;
-    top: 18px;
+    top: 20px;
 }   
 
 #searchBar_parent {
@@ -157,19 +151,19 @@ a {
 
 #santa_hat{
     position: absolute;
-    right: 1.5px;
+    right: 22px;
     bottom: 9px;
 }
 
 #warking {
     position: absolute;
-    left: 20px;
-    bottom: 2px;
+    left: 18px;
+    bottom: 4px;
 }
 
 #searchLine {
     position: absolute;
-    left: 85px;
+    left: 72px;
     bottom: 11.5px;
 }
 
@@ -367,8 +361,8 @@ a {
 }
 
 #record_bookMark{
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 40px;
   position: absolute;
   left: 5%;
   top: 3%;

@@ -4,23 +4,21 @@
 	
 	
 	<link rel="stylesheet" type="text/css" href="<c:url value='/css/Record.css' />">
-		<script src="<c:url value='/js/jquery-3.6.1.min.js' />"></script>	
+	<link rel="stylesheet" type="text/css" href="<c:url value='/css/modal_login.css'/>">
+	<script src="<c:url value='/js/jquery-3.6.1.min.js' />"></script>	
 	<script src="<c:url value='/js/cardList.js' />"></script>
 	<script src="<c:url value='/js/moreBox.js' />"></script>
 	<script src="<c:url value='/js/nextPage.js' />"></script>
 	<script src="<c:url value='/js/search.js' />"></script>
-	
+	<script src="<c:url value='/js/modal_login.js'/>"></script>
+	<script src="<c:url value='/js/main-script.js'/>"></script>
+		
 	<script src="https://kit.fontawesome.com/1d26a052eb.js"
 	crossorigin="anonymous"></script>
 	
 	
-<!-- 모달 -->
-	<script src="<c:url value='js/modal_login.js'/>"></script>
-	
-		
-<!-- 		<script src="../write/loginpage/modal_login.js"></script>
-		<link rel="stylesheet" type="text/css" href="../write/loginpage/modal_login.css"> 		
-		<script src="https://kit.fontawesome.com/f31bf33191.js" crossorigin="anonymous"></script>	 -->				
+
+		 
 		
 		<style>
       nav {
