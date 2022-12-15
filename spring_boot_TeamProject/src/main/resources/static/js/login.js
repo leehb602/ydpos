@@ -46,5 +46,12 @@
 
  	}); // submit 종료
  	
+    $("#exit_btn").click(function () {
+    	$(".madal_background").fadeOut();
+	});
+	
+	$('#membership_btn').on('click', function() {
+		$(location).attr('href', '/join/joinMain');
+	});
  });
  

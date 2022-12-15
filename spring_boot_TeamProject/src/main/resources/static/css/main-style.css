@@ -271,7 +271,14 @@ html, body {
       padding: 0;
       margin: 0;
       overflow: hidden;
+      height: 200px;
     }
+     
+     .box-wrapper-last a img{
+     width: 100%;
+     height: 200px;
+     object-fit: cover; /* fill보다 UI 깔끔함 */
+     }
 
     .box-wrapper-last a img:hover {
       filter: brightness(80%);
@@ -307,12 +314,13 @@ html, body {
     .box-item-photo img {
       display: flex;
       overflow: hidden;
-      height: auto;
-      max-width: 100%;
+      height: 240px;
+      width: 100%;
       align-items: center;
 /*       transition: 0.3s ease-in-out; */
       backface-visibility: hidden;
       vertical-align: top;
+ 	  object-fit: cover;
     }
 
     .box-item-photo:before, .box-item-photo:after {

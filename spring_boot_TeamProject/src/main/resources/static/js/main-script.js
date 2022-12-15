@@ -2,8 +2,8 @@
  * main-script
  */
  
- // Top으로 이동 가능한 기능
 $(document).ready(function() {
+ // Top으로 이동 가능한 기능
   $(window).scroll(function() {
     if ($(this).scrollTop() > 300) {
       $('.top').fadeIn();
@@ -29,6 +29,9 @@ $(document).ready(function() {
   		 
   	});
   	
+  	
   //유저명, 유저아이콘 누르면 개인 프로필로 이동
 		//jsp의 onlick이벤트, UserProfileController의 매핑 확인
- });
+		
+	
+ }); // 다큐먼트 종료

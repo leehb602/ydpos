@@ -45,5 +45,3 @@
    			<a id="basic-btn" class="signoutBtn">sign out</a>
         </c:if>
       </div>
-      
-      

@@ -9,9 +9,9 @@ $(document).ready(function(){
 	});	
 	
 	$("#btn4").on('click',function(){
-			window.location.href = "/publicE/viewlistAllpublicEvent/";
-		});
-		
+			window.location.href = "/writepage/";
+	});
+	
 	
 	$(".BoadPre").on('click',function(){
 			window.location.href = "/event_card/${ecardNo-1}";////////

@@ -6,11 +6,9 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>공공기관 카드형 게시판</title>
-		<c:import url="/WEB-INF/views/publicEvent/layout/head.jsp" />
-		<link rel="stylesheet" type="text/css" href="<c:url value='/css/publicEvent.css' />">
-		<script src="<c:url value='/js/publicEvent.js' />"></script>
-			<style>
+		<title>공공기관 카드형 게시판</title>		
+		<c:import url="/WEB-INF/views/publicE/layout/head.jsp" />		
+		<style>
 			.company a:nth-child(4) {
 			color: #274c5e;
 			text-decoration: none;
@@ -18,17 +16,18 @@
 			.company a:not(.company a:nth-child(4)) {
 			color: #77919d;
 			text-decoration: none;
-			}
-			
-		</style>	
-	
+			}			
+		</style>		
 	</head>
 	<body> 
 		<!-- warp -->
 		<div id="wrap">	
 		<!--  top -->         
-        <c:import url="/WEB-INF/views/publicEvent/layout/top.jsp" /> 
-        </div>
+        <nav>
+        <c:import url="/WEB-INF/views/publicE/layout/top.jsp" /> 
+        </nav>
+        
+       
 			<div class="eTitleBox">
 				<h5 class="sub_eTitle">SUGGESTED INFO</h5>
 				<h1 class="page_eTitle">뚜벅뚜벅 공공뉴스</h1>
@@ -70,8 +69,11 @@
 				</div>
 			</div>		
 		<!-- //wrap -->
-	 <!--  bottom -->         
-	<c:import url="/WEB-INF/views/publicEvent/layout/bottom.jsp" /> 
+	 <!--  bottom --> 
+	 <br><br><hr>      
+	<c:import url="/WEB-INF/views/publicE/layout/bottom.jsp" /> 
+	<!-- 여기부터 모달 창 -->
+ 	<c:import url="/WEB-INF/views/layout/login.jsp"/>
 	</body>
 </html>
 
