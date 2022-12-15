@@ -22,7 +22,9 @@ public class UserProfileController {
 	@RequestMapping("/profile/userProfile/{userId}")
 	public String userProfile(@PathVariable String userId, Model model) {
 		ArrayList<UserProfileVO> userList = service.userProfile(userId);
+		ArrayList<UserProfileVO> mentList = service.userMent(userId);
 		model.addAttribute("userList", userList);
+		model.addAttribute("mentList", mentList);
 		model.addAttribute("userName", service.getUserName(userId));
 		model.addAttribute("userJoinDate", service.getUserJoinDate(userId));
 		return "profile/userProfile";

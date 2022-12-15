@@ -13,16 +13,9 @@
 	<table border="1">
 		<c:forEach var="ment" items="${mentList }">
 			<tr>
-				<td>
-					<input type="hidden" value="${ment.userId }" id="mentId">
-					${ment.userId }
-				</td>
+				<td>${ment.userId }</td>
 				<td>${ment.comment }</td>
-				<td>
-					<input type="hidden" value="${ment.mentNo }" id="mentNo">
-					<input type="hidden" value="${sessionScope.sid }" id="sessionId">
-					<input type=button value="삭제" class="deleteBtn" id="deleteBtn">
-				</td>
+				<td><a href="<c:url value='/comments/commentsDelete/userId=${ment.userId}&mentNo=${ment.mentNo}'/>"><button>삭제</button></a></td>
 			</tr>
 		</c:forEach>
 	</table>

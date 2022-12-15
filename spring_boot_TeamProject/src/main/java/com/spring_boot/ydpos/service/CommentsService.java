@@ -25,6 +25,11 @@ public class CommentsService implements ICommentsService{
 	@Override
 	public ArrayList<CommentsVO> getCommentList(int writeNo) {
 		return dao.getCommentList(writeNo);
+	}
+
+	@Override
+	public void deleteComments(String mentNo) {
+		dao.deleteComments(mentNo);
 	}	
 	
 }

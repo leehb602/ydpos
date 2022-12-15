@@ -87,7 +87,7 @@ table {
 }
 
 table tr {
-	height: 50px;
+	height: 45px;
 }
 
 table th {
@@ -126,4 +126,9 @@ button:hover {
 #paging {
 	display: block;
 	text-align: center;
+}
+
+#deleteBtn {
+	height: 30px;
+	line-height: 30px;
 }

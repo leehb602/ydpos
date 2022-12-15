@@ -88,7 +88,7 @@ $(document).ready(function() {
 	})
 	
 	$('#consent').on('click',function(){
-		window.location.href = "#";
+		location.href = "#";
 	});
 
 	$('#hp1').on('keyup', function() {

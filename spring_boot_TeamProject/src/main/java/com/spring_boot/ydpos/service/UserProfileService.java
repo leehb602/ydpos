@@ -53,5 +53,10 @@ public class UserProfileService implements IUserProfileService {
 	public String getUserId(int writeNo) {
 		return dao.getUserId(writeNo);
 	}
+
+	@Override
+	public ArrayList<UserProfileVO> userMent(String userId) {
+		return dao.userMent(userId);
+	}
 	
 }
