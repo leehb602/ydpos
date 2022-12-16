@@ -1,18 +1,37 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%> 
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+<script type="text/javascript">
+                            /**
+                             * 파일 업로드
+                             */
+                            function readImage(input) {
+                                if (input.files && input.files[0]) {
+                                    const reader = new FileReader();
 
+                                    reader.onload = (e) => {
+                                        const previewImage = document.getElementById('previewImage');
+                                        previewImage.src = e.target.result;
+                                    }
+                                    reader.readAsDataURL(input.files[0]);
+                                }
+                            }
+                            // 이벤트 리스너
+                            document.getElementById('inputImage').addEventListener('change', (e) => {
+                                readImage(e.target);
+                            })
+                        </script>
 <c:import url='/WEB-INF/views/write/layout/head.jsp' />
 
 
 </head>
 
-</html>
+
 
 <title>글쓰기 페이지</title>
 
@@ -21,12 +40,14 @@
 
 
 <body>
-				<c:import url='/WEB-INF/views/layout/top.jsp' />
+	<nav>
+		<c:import url='/WEB-INF/views/layout/top.jsp' />
+	</nav>
 
 
+	<form id="a" action="/write2" method="post"
+		enctype="multipart/form-data">
 
-	<form id="a" action="/write2" method="post" enctype="multipart/form-data">
-	
 
 
 		<div>
@@ -71,37 +92,12 @@
 							<div id="info_2">
 								<!--작은부모2-->
 
-								<div class="info_2_1" >
-									<div class="group">
-										분류&nbsp
-										<div>
-											<select name="group" id="group">
-												<option>Select</option>
-												<option value="개인">개인</option>
-												<option value="법인">법인</option>
-											</select>
-										</div> 
-									</div>
-								</div>
-								<div>
-									<div class="environment">
-										환경&nbsp
-										<div>
-											<select name="environment" id="environment"> 
-												<option value="전체">전체</option>
-												<option value="산">산</option>
-												<option value="바다" >바다</option>
-												<option value="호수">호수</option>
-												<option value="레저">레저</option>
-											</select>
-										</div>
-									</div>
-								</div>
+								<div></div>
 								<div>
 									<div class="area">
-										지역&nbsp  
+										지역&nbsp
 										<div>
-											<select name="area" id="area">
+											<select name="writeCategory" id="writeCategory">
 												<option value="전국">전국</option>
 												<option value="서울">서울</option>
 												<option value="경기도">경기도</option>
@@ -114,22 +110,7 @@
 										</div>
 									</div>
 								</div>
-								<div>
-									<div class="theme">
-										테마&nbsp
-										<div>
-											<select name="theme" id="theme">
-												<option value="전체">전체</option>
-												<option value="맛집">맛집</option>
-												<option value="쇼핑">쇼핑</option>
-												<option value="감성">감성</option>
-												<option value="어린이">어린이</option>
-												<option value="당일치기">당일치기</option>
-												<option value="1박2일">1박2일</option>
-											</select>
-										</div>
-									</div>
-								</div>
+
 
 
 							</div>
@@ -140,12 +121,7 @@
 					<!-- 실험중 -->
 					<!-- 실험중 -->
 					<!-- 실험중 -->
-					<!-- 실험중 -->
-					<!-- 실험중 -->
-					<!-- 실험중 -->
-					<!-- 실험중 -->
-					<!-- 실험중 -->
-					<!-- 실험중 -->
+
 
 					<div id="Thumbnail">
 						<h4>대표이미지 등록</h4>
@@ -153,28 +129,9 @@
 							name="writeImg">
 
 
-	
 
-						<script type="text/javascript">
-                            /**
-                             * 파일 업로드
-                             */
-                            function readImage(input) {
-                                if (input.files && input.files[0]) {
-                                    const reader = new FileReader();
 
-                                    reader.onload = (e) => {
-                                        const previewImage = document.getElementById('previewImage');
-                                        previewImage.src = e.target.result;
-                                    }
-                                    reader.readAsDataURL(input.files[0]);
-                                }
-                            }
-                            // 이벤트 리스너
-                            document.getElementById('inputImage').addEventListener('change', (e) => {
-                                readImage(e.target);
-                            })
-                        </script>
+
 					</div>
 				</div>
 
@@ -195,17 +152,18 @@
 
 
 
-				
-				
 
 
-            <textarea id="summernote" name="editordata"></textarea>
- 
-				
+
+
+				<textarea id="summernote" name="editordata"></textarea>
+
+
 
 
 				<div id="btn_">
-					<button id="btn_" type="submit" value="등록">등록</button>&nbsp
+					<button id="btn_" type="submit" value="등록">등록</button>
+					&nbsp
 					<!-- <input type="submit" value="write"> -->
 					<button type="button">취소</button>
 				</div>
@@ -228,9 +186,9 @@
 	<!--여기부터 사용하신 바디 맨 밑에 넣으시면 됩니다 -->
 
 	<!-- 여기부터 모달 창 -->
- <c:import url="/WEB-INF/views/layout/login.jsp"/>
- 
-	
+	<c:import url="/WEB-INF/views/layout/login.jsp" />
+
+
 
 
 

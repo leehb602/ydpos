@@ -39,6 +39,21 @@ public class CardListService implements ICardListService {
 
 
 
+	@Override
+	public CardListVO detailViewCard(int writeNo) {
+		// TODO Auto-generated method stub
+		return dao.detailViewCard(writeNo);
+	}
+
+
+
+	
+
+
+
+
+
+
 
 
 

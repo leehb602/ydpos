@@ -291,7 +291,7 @@ a {
     aspect-ratio: 13/9;
 
 }
-.event_card {
+.event_cards {
     background-color: #e9f3fa;
     border-radius: 20px;
     transition: 0.3s;
@@ -299,7 +299,7 @@ a {
     border:none;
     font-family: 'LeferiPoint-WhiteObliqueA'; 
 }
-.event_card:hover {
+.event_cards:hover {
     box-shadow: 0 4px 20px 0 #7f9eb2;
     cursor:pointer;
     border-radius: 20px;
@@ -393,8 +393,14 @@ a {
   right: 0%;
   top: 22%;
   font-size: 0.8em;
+  margin-right: 20px;
 }
 
+#userIcon2{
+	 position: absolute;
+	 right: 27.5%;
+	 top: 5.7%;
+	}
 
 
 /*************nextBox************/
@@ -581,4 +587,8 @@ html, body {
     width: 80px;
     height: 80px;
     margin-top: -30px;
+  }
+  
+  #record_height{
+  
   }

@@ -9,9 +9,9 @@ public interface IPublicEventService {
 	public PublicEventVO detailViewPublicE(String ecardNo);
 	
 	//최신순으로 5개 불러오는 메서드
-	public ArrayList<PublicEventVO> recentView();
+	public ArrayList<PublicEventVO> recentViewEvent();
 	//가장 높은 조회수 순으로 불러오는 메소드
-	public ArrayList<PublicEventVO> hitsView();
+	/* public ArrayList<PublicEventVO> hitsView(); */
 	
 	
 	

@@ -14,6 +14,9 @@
   		<result property="writeDate"  column="writeDate"  />
   		<result property="userId"  column="userId"  />
   		<result property="userImg"  column="userImg"  />
+  	    <result property="writeHits"  column="writeHits"  />
+  		<result property="fileName"  column="fileName"  />
+  		<result property="userType"  column="userType"  />
   	</resultMap>
   	
   	<!-- 여행기 전체 보기 -->
@@ -34,6 +37,12 @@
   		Select * from writePage where
   		writeCategory like concat('%', #{subKey}, '%')
   </select>
+  
+  	<!--게시판 상세  -->
+	<select id="detailViewCard" parameterType="int" 
+	resultMap="cardListResult" >
+	SELECT * FROM writePage WHERE writeNo = #{writeNo}	
+	</select>
   	
  </mapper> 
   

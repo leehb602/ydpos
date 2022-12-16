@@ -15,7 +15,7 @@
 			<table class="upperTable" >
 				<tr>
 					<td class="left_id"><input type="hidden" value="${sessionScope.sid }" id="userId">
-						<input type="hidden" value="1" id="writeNo">
+						<input type="hidden" value="${cdList.writeNo }" id="writeNo">
 						${sessionScope.sid }</td>
 					<td class="middle_comment" ><input type="text" id="comment"></td>
 					<td class="right_btn"><input type="button" value="등록" id="registrationBtn"></td>

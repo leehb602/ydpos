@@ -29,17 +29,17 @@ public class PublicEventService implements IPublicEventService {
 		return dao.detailViewPublicE(ecardNo);
 	}
 
-	//최신순으로 5개 출력하는 메서드 오버라이드
+	//최신순으로 3개 출력하는 메서드 오버라이드
 	@Override
-	public ArrayList<PublicEventVO> recentView() {
-		return dao.recentView();
+	public ArrayList<PublicEventVO> recentViewEvent() {
+		return dao.recentViewEvent();
 	}
 
 	//가장 높은 조회수 순으로 불러오는 메소드 오버라이드
-	@Override
-	public ArrayList<PublicEventVO> hitsView() {
-		return dao.hitsView();
-	}
+	/*
+	 * @Override public ArrayList<PublicEventVO> hitsView() { return dao.hitsView();
+	 * }
+	 */
 	
 
 

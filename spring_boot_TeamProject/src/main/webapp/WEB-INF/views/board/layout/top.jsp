@@ -38,8 +38,10 @@
 	          <a href="<c:url value='/publicE/viewlistAllpublicEvent'/>" id="menu-btn">공공기관</a>
 	          <a href="<c:url value='/writepage'/>" id="menu-btn">글쓰기</a>
           </div>
-          	<img src="<c:url value='/image/user (3).png'/>"onclick="location.href='/profile/userProfile/${sessionScope.sid }'" width="30"height="30" id="userIcon">
-   			<a href="<c:url value='/profile/userProfile/${sessionScope.sid }'/>" id="menu-btn" class="userName">${sessionScope.suserName }님</a>
-   			<a id="basic-btn" class="signoutBtn">sign out</a>
+          	<div id="record_height">
+      <img src="<c:url value='/image/user (4).png'/>"onclick="location.href='/profile/userProfile/${sessionScope.sid }'" width="30"height="30"  id="userIcon2"/>
+   <a href="<c:url value='/profile/userProfile/${sessionScope.sid }'/>" id="menu-btn" class="userName">${sessionScope.suserName }님</a>
+   <a id="basic-btn" class="signoutBtn">sign out</a>
+   </div>
         </c:if>
       </div>

@@ -35,18 +35,18 @@
 		</div>
 		<!--서치 박스 끝 -->
 
-		<div id="filterBox">
-			<!--필터 박스 시작 -->
+		<!-- <div id="filterBox">
+			필터 박스 시작
 
 			<div id="moreBox">
 				"검색 필터 기능 ON/OFF"
 				<button id="btn_more">More</button>
 			</div>
 		</div>
-		<!--필터 박스 끝-->
+		필터 박스 끝
 
 		<div id="subFilterBox">
-			<!--서브필터 박스 시작 -->
+			서브필터 박스 시작
 			<div id="filter1">
 				
 				<span>유저 : </span> 
@@ -80,7 +80,7 @@
 					value="당일" onchange="makeFilter(this)"/> 당일</label>
 			</div>
 		</div>
-		<!--서브필터박스 끝 -->
+		서브필터박스 끝 -->
 
 		<!--레코드 메인 시작 -->
 		<div id="record_main">
@@ -118,6 +118,7 @@
 		</div>
 		<!-- 넥스트 박스 끝 -->
 	</section>
+	<hr><br>
 	<!--  bottom -->
 	<c:import url="/WEB-INF/views/board/layout/bottom.jsp" />
 	<!-- 여기부터 모달 창 -->

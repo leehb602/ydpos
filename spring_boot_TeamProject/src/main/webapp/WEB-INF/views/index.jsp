@@ -78,15 +78,12 @@
         <c:forEach var="hits" items="${hitsView}">
           <div class="box">
             <div class="box-item-photo">
-              <img data-src="<c:url value='/image/${hits.ecardImgDetail }'/>" border="0" alt="이미지를 불러오지 못했습니다." class="lozad"><a href="/event_card/${hits.ecardNo}"></a>
+              <img data-src="<c:url value='/image/${hits.fileName }'/>" border="0" alt="이미지를 불러오지 못했습니다." class="lozad"><a href="/event_cards/${hits.writeNo}"></a>
             </div>
             <div class="box-item-detail">
-              <span id="box-header">${hits.ecardTitle }</span><!-- 화려한 야경이 눈부신 부산 더베이 101 -->
+              <span id="box-header">${hits.writeTitle }</span><!-- 화려한 야경이 눈부신 부산 더베이 101 -->
               <p></p>
-              ${hits.ecardText }
-              <!-- 한국 대표 야경 명소로 손꼽히는 부산 해운대. 그런 해운대에서도 가장 화려한 야경을 볼 수 있는 곳이 바로 더베이 101이에요. 고층 빌딩의 조명 자체도 아름답지만, 해운대 앞바다에 반사된
-              빛으로 더욱 눈부신 해운대의 야경은 사진으로 다 담아낼 수 없을 정도로 환상적이에요. 맞은편의 동백섬 누리마루 역시 아름다운 야경으로 유명하답니다. 해운대의 낭만적인 밤을 만끽하고 싶은
-              사람이라면 꼭 방문해 보세요. -->
+              ${hits.editordata }
             </div>
           </div>
           </c:forEach>
@@ -99,53 +96,21 @@
           <span>다음은 여기로 가볼까?</span>
         </div>
         <div class="box-wrapper">
+        <c:forEach var="rve" items="${recentViewEvent}">
           <div class="box">
             <div class="box-item-photo">
-              <img data-src="<c:url value='/image/안산방아머리해변.jpg'/>" border="0" alt="이미지를 불러오지 못했습니다." class="lozad"><a
-                href="404.html"></a>
+              <img data-src="<c:url value='/image/${rve.ecardImgDetail }'/>" border="0" alt="이미지를 불러오지 못했습니다." class="lozad">
+              <a href="/event_card/${rve.ecardNo}"></a>
             </div>
             <div class="box-item-detail">
-              <span id="box-header">서해의 선물, 가족 중심 해변. 안산 방아머리 해변</span>
+              <span id="box-header">${rve.ecardTitle }</span>
               <p></p>
               <span id="box-information">
-                천혜의 자연환경을 자랑하는 대부도는 수도권에서 한 시간이면 바다를 만날 수 있는 곳이다. 도심을 빠져나와 곧게 뻗은 시화방조제를 달리는 동안 펼쳐지는 바다 풍경에 일상의 스트레스 정도는
-                쉽게 날릴 수 있을 만큼 시원하다. ‘역시 나오기 잘했다’는 생각을 들 때 즈음 어느새 길은 서해의 큰 섬 대부도로 연결된다.</span>
-            </div>
-
-          </div>
-          <div class="box">
-            <div class="box-item-photo">
-              <img data-src="<c:url value='/image/시흥웨이브파크.jpg'/>" border="0" alt="이미지를 불러오지 못했습니다." class="lozad"><a
-                href="404.html"></a>
-            </div>
-            <div class="box-item-detail">
-              <span id="box-header">서핑, 일상이 되다! 시흥 웨이브 파크</span>
-              <p></p>
-              <span id="box-information">
-                최근 서핑의 인기가 폭발적이다. 그러나 서핑을 위해 멀리 동해나 제주를 찾아야 한다는 것은 이제 고정관념일 뿐이다. 이제 마음만 먹으면 가까운 곳에서 365일 언제라도 서핑을 즐길 수
-                있다. 최근 시흥시에 문을 연 웨이브 파크는 넓은 인공해변에서 세계 유명 서핑 플레이스의 파도를 경험할 수 있는 흥미로운 곳이다. 접근성은 물론 규모나 시설 면에서도 매우
-                뛰어나다.</span>
-            </div>
-            <div class="box-item-bottom">
-              <!--             <button class="box-item-button">
-              >
-            </button> -->
+               ${rve.ecardText }
+               </span>
             </div>
           </div>
-          <div class="box">
-            <div class="box-item-photo">
-              <img src="<c:url value='/image/국립수목원.jpg'/>" border="0" alt="이미지를 불러오지 못했습니다." class="lozad"><a href="404.html"></a>
-            </div>
-            <div class="box-item-detail">
-              <span id="box-header">북유럽의 숲을 걷는 듯한 포천 국립수목원</span>
-              <p></p>
-              <span id="box-information">
-                경기도 포천시 소흘읍 광릉수목원로에 펼쳐진 ‘국립수목원’은 경기도 최고의 눈꽃 여행지다. 전나무 숲으로 가는 길과 육림호 등 곳곳에서 아름다운 수목원만의 분위기 있는 설경을 만날 수
-                있다. 새하얀 눈꽃을 보면 절로 마음마저 깨끗하게 정화된다. 푸른 전나무 위로 하얗게 눈이 내려앉은 풍경은 마치 사진으로 본 북유럽의 어느 숲을 걷는 듯한 착각에 빠질
-                정도다.</span>
-            </div>
-
-          </div>
+          </c:forEach>
         </div>
       </div>
     </div>
@@ -199,8 +164,8 @@
     </div>
     <div class="box-wrapper-last">
     <c:forEach var="rv" items="${recentView}">
-      <a href="/event_card/${rv.ecardNo}" class="box-item-photo">
-        <img data-src="<c:url value='/image/${rv.ecardImgDetail}'/>" border="0" alt="이미지를 불러오지 못했습니다." class="lozad">
+      <a href="/event_cards/${rv.writeNo}" class="box-item-photo">
+        <img data-src="<c:url value='/image/${rv.fileName}'/>" border="0" alt="이미지를 불러오지 못했습니다." class="lozad">
       </a>
       </c:forEach>
     </div>

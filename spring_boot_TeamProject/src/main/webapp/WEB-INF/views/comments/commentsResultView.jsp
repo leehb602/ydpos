@@ -12,18 +12,18 @@
 		
 	</head>
 	<body>
-	<table calss="underTable" id="underTable">
+	<table class="underTable" id="underTable">
 		<c:forEach var="ment" items="${mentList }">
 			<tr>
 				<td  class="left_id">
-					<input type="hidden" value="${ment.userId }" id="mentId">
+					<input type="hidden" value="${ment.userId }" class="mentId">
 					${ment.userId }
 				</td>
 				<td class="middle_comment" id=undercomment><span>${ment.comment }</span></td>
 				<td class="right_btn">
-					<input type="hidden" value="${ment.mentNo }" id="mentNo">
-					<input type="hidden" value="${sessionScope.sid }" id="sessionId">					
-					<input type=button value="삭제" class="deleteBtn" id="deleteBtn">
+					<input type="hidden" value="${ment.mentNo }" class="mentNo">
+					<input type="hidden" value="${sessionScope.sid }" class="sessionId">				
+					<input type="button" value="삭제" class="deleteBtn" id="deleteBtn">
 				</td>
 			</tr>
 		</c:forEach>
