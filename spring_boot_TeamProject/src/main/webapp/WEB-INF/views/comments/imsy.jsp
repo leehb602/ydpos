@@ -10,8 +10,6 @@
 <body>
 			
 		
-
-	
 	
 	
 	<!-- 댓글창 화면 입니다!  붙여넣기 할부분////////////////-->
@@ -19,7 +17,6 @@
 	     <!-- body 끝나기전 젤 아래쪽에 코드 붙여 주세요! -->
 		<c:import url="/WEB-INF/views/comments/comments.jsp" /> <br>
 		<c:import url="/WEB-INF/views/comments/commentsResultView.jsp" />
-	
 	
 	
 	

@@ -1,0 +1,436 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'YESMyoungjo-Regular'; /* 명조체 */
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_13@1.0/YESMyoungjo-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {   
+    font-family: 'LeferiPoint-WhiteObliqueA'; /* 딱딱한 글씨체 */
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-WhiteObliqueA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/* 글씨 배경색 칼라 */
+#col1{
+    color:#274c5e; 
+}
+#col2{
+    color: #dae9f4;
+}
+#col3{
+    color: #77919d;
+}
+#col4{
+    color: #7f9eb2;
+}
+                       /* nav box */
+                       
+.nav {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .nav-menu {
+    display: flex;
+    max-width: 100%;
+    height: 140px;
+    align-items: center;
+  }
+  .nav-menu {
+    font-family: 'LeferiPoint-WhiteObliqueA';
+    font-weight: bolder;
+    letter-spacing: 1.5px;
+  }
+  #basic-btn {
+    background-color: lightblue;
+    border-radius: 28px;
+    /*     	border:1px solid #18ab29; */
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: 'LeferiPoint-WhiteObliqueA';
+    font-size: 15px;
+    padding: 12px 26px 8px 26px;
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+    letter-spacing: 2px;
+  }
+
+@keyframes jelly {
+  25% {transform: scale(0.9, 1.1);}
+  50% {transform: scale(1.1, 0.9);} 
+  75% {transform: scale(0.95, 1.05);}
+}
+
+  #basic-btn:hover {
+    background-color: skyblue;
+    transition: 0.3s ease-in-out;
+    animation: jelly 0.5s;
+  }
+
+  #basic-btn:active {
+    position: relative;
+    top: 1px;
+  }
+
+  .company {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+  }
+  
+      #menu-btn {
+    /*       display: block; */
+    margin-right: 40px;
+    padding: 12px 20px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s ease-in-out;
+  }
+
+  #menu-btn:hover {
+    color: #274c5e;
+    transition: 0.3s ease-in-out;
+  }
+
+  .company>a>img {
+    width: 100px;
+    height: auto;
+    margin-right: 50px;
+    border-radius: 10px;
+    cursor: pointer;
+    
+  }
+ .company >a {
+  text-decoraion:none;
+  }
+ .board_Detailimage{
+ 	text-align:center;
+ 	
+ }
+  ​
+/* --------------------------------------------- */
+                           /* footer */
+
+
+html, body {
+    height: 100%;
+    width: 100%;
+  }
+  
+  /* 이 부분 CSS에 넣어주셔야 합니다. */
+  #wrap {
+    margin-left: 140px;
+    margin-right: 140px;
+    position: relative;
+  }
+  
+/* #wrap 속성 값 참조 */
+.footer {
+    border-top: 1px solid lightgray;
+    padding-bottom: 40px;
+    padding-top: 60px;
+    margin-top: 50px;
+  }
+	
+  .footer-box-wrapper {
+    display: flex;
+  }
+	
+  .footer-box {
+    margin: 10px 50px 10px 0px;
+    width: 350px;
+    height: 300px;
+  }
+
+  .footer-box>a>img {
+    border-radius: 15px;
+  }
+  .style{
+    font-family: 'YESMyoungjo-Regular';
+    font-weight: bold;
+    font-size: 16px;
+  }
+  .style2 {
+    font-size: 13px;
+    color: gray;
+    font-family: 'LeferiPoint-WhiteObliqueA';
+    font-weight: 105px;
+  /*   cursor: pointer; */
+  }
+  
+  .style2 a{
+    text-decoration: none;
+    color: gray;
+  }
+  
+  .summer img {
+    float: right;
+    width: 80px;
+    height: 80px;
+    margin-top: -30px;
+  }
+/* _____________________________________________________ */
+/* ------------------------------------------------------------------ */
+
+/* _____________________________________________________ */
+/* -------------여기부터 choi~ css-------------------------------- */
+
+
+.board_Box{
+	margin-top:50px;
+}
+
+.boardpageDetail {
+  position:relative;
+}
+.board_Detailtext{
+	text-aligin:center;
+	font-size:medium;
+}
+.board_titleBox{
+  position:relative;
+  color:  #274c5e;
+  margin: auto;
+  padding: 2em;
+  text-align: center;
+  font-family: 'LeferiPoint-WhiteObliqueA';
+ 
+}
+
+/* 1번 */
+.board_title {
+  color: #fff;
+  font-size: xx-large;
+  margin-bottom: -20px;
+  text-shadow: 1px 1px 0px rgb(87, 86, 86);
+  
+}
+.board_subtitle {
+  color: #fff;
+  text-shadow: 1px 1px 0px grey;
+}
+
+/* 2번 */
+.board_Mainimage {
+ 
+  overflow:hidden;
+  margin-top: -150px;
+  
+}
+/* 3번 */
+.board_Mainimage > img {
+  
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.boardtext {
+  position: relative;
+  margin-top: -20rem;
+  background-color: #dae9f4; 
+  margin-bottom: 1rem;
+  padding: 5rem;
+  font-family: 'LeferiPoint-WhiteObliqueA';
+}
+.boardtext .profile-Box{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin:3rem 0;
+  margin-top: -4rem;
+}
+.profile-img {
+  margin-right: 4rem;
+}
+
+.profile-img > img {
+  width: 5rem;
+  height:5rem;
+  border-radius: 50%;
+  border: 1px solid white;
+  
+}
+.Infobox{
+  margin-bottom: -1rem;
+}
+.boardtext .profile-Box .profile{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.boardtext .profile-Box .profile .profile-img{
+  width: 3.5rem;
+  height:3.5rem;
+  
+}
+.boardtext .profile .boardWirteDate .boardWriteName {
+  margin: 0 2rem;
+  letter-spacing: 1px;
+}
+
+.board_content {
+  width:100%;
+  color:  #274c5e;
+  margin: 30 px;
+  padding: 0 auto;
+  text-align: left;
+  font-size: 12px; 
+ 
+}
+.board_Detailimage > img{
+  position: relative;
+  max-width: 100%;
+  max-height: 60%;
+  
+}
+/* --------------------- 밑에 하단 button css -----//////------- */
+
+
+/*   요긴 공공기관 상세페이지~~클릭 링크이동 */
+
+.eventLinkMove {
+  position: relative;
+  text-align: center;
+
+}
+
+ .linkBtn {
+  background-color: lightblue;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: 'LeferiPoint-WhiteObliqueA';
+  font-size: 20px;
+  padding: 20px;
+  padding-top: 30px;
+  text-decoration: none;
+  border: hidden;
+  margin: 30px;
+  font-weight: bold;
+
+} 
+
+.linkBtn:hover {
+  background-color: skyblue;
+} 
+
+/*   ----------------------------------------------- */
+.pageDetailBtn a {
+	text-decoration: none;
+	background-color: #dae9f4;
+  color:#274c5e;
+
+  border-radius: 5px;
+  border-style: hidden;
+  padding: 0.5rem;
+  font-size: small;
+  margin: 0.7rem;
+  display: inline-flex;
+  justify-content: space-between;
+  font-weight: bold;
+  padding: 10px 12px;
+}
+.pageDetailBtn a:hover {
+  box-shadow: 0 4px 20px 0  #dae9f4;
+  color:#dae9f4;
+  background-color: #274c5e;
+  cursor:pointer;
+}
+
+
+
+.pageDetailBtn button {
+  background-color: #dae9f4;
+  color:#274c5e;
+
+  border-radius: 5px;
+  border-style: hidden;
+  padding: 0.5rem;
+  font-size: small;
+  margin: 0.7rem;
+  display: inline-flex;
+  justify-content: space-between;
+  font-weight: bold;
+  padding: 10px 12px;
+  
+}
+.pageDetailBtn button:hover {
+  box-shadow: 0 4px 20px 0  #dae9f4;
+  color:#dae9f4;
+  background-color: #274c5e;
+  cursor:pointer;
+}
+
+
+.action{
+  position: fixed;
+  bottom: 50px;
+  left: 50px;
+  width: 50px;
+  height: 50px;
+  opacity: 0.8;
+  border-radius:50%;
+  cursor:pointer;
+  
+}
+.action span {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #274c5e;
+  font-size: 2em;
+  transition: 0.3s ease-in-out;
+}
+.action.active span{
+  transform: rotate(135deg);
+}
+.action ul{
+  position: absolute;
+  bottom: 55px;
+  background:#fff;
+  min-width: 90px;
+  padding: 20px;
+  border-radius: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+}
+.action.active ul{
+  
+  bottom: 65px;
+  opacity: 1;
+  visibility: visible;
+  transition: 0.3s;
+}
+.action ul li{
+  font-family: 'LeferiPoint-WhiteObliqueA';
+  font-weight: bold;
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px 0;
+  transition: 0.3s;
+}
+.action ul li:hover{
+  font-weight: 100px;    
+}
+
+
+.action ul li img{
+  height: 20px;
+  margin-right: 10px;
+  opacity: 0.2;
+}
+.action ul li:hover img{
+  
+  opacity: 0.8;
+}
+

@@ -30,7 +30,8 @@
 			  "writeNo":$('#writeNo').val()},
 		dataType:"text",
 		success:function(result){
-			$('#commentsBox').html(result)
+			$('#commentsBox').html(result);
+			$('#comment').val("");
 		},
 		error:function(){
 		alert("error: 관리자에게 문의하세요");

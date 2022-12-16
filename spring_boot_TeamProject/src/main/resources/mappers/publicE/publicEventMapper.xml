@@ -15,7 +15,7 @@
   		<result property="ecardLink"  column="ecardLink"  />
   		<result property="ecardDate"  column="ecardDate"  />
   		<result property="userId"  column="userId"  />
-  		<result property="ecardView"  column="ecardView"  />
+  		<result property="ecardview"  column="ecardView"  />
   		<result property="userImg"  column="userImg"  />
   	</resultMap>
   	
@@ -27,8 +27,7 @@
 <!--게시판 상세  -->
 	<select id="detailViewPublicE" parameterType="string" 
 	resultType="com.spring_boot.ydpos.model.PublicEventVO" >
-	SELECT * 
-	FROM publicE WHERE ecardNo = #{ecardNo}	
+	SELECT * FROM publicE WHERE ecardNo = #{ecardNo}	
 	</select>
 	
 	
@@ -37,18 +36,13 @@
 	
 	
 <!-- Main에 사용할 코드 임시 작성 -->
-<!-- 최신순으로 메인에서 5개 이미지 출력 -->	
-<select id="recentView"  resultMap="publicEventResult">
-	SELECT * FROM publicE ORDER BY ecardNo DESC LIMIT 0, 5
+<!-- 최신순으로 메인에서 3개 이미지 출력 -->	
+<select id="recentViewEvent"  resultMap="publicEventResult">
+	SELECT *
+	FROM publicE
+	ORDER BY ecardNo DESC LIMIT 0, 3
 </select>
 
-<!-- 2주 간 가장 높은 조회수 순으로 메인에서 3개 이미지 출력 -->
-<select id="hitsView"  resultMap="publicEventResult">
-	SELECT * FROM publicE 
-	WHERE ecardDate BETWEEN '2022-12-10' AND '2022-12-14' 
-	ORDER BY ecardView DESC LIMIT 0, 3
-	<!-- 현재 시간으로 출력 ecardDate AS [CURRENT_TIMESTAMP] -->
-</select>
 <!-- Main에 사용할 코드 임시 작성 끝 -->
 
 

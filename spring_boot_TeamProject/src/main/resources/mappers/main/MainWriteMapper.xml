@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+   <mapper namespace="com.spring_boot.ydpos.dao.IMainWriteDAO">
+  	<resultMap id="mainWriteResult" type="com.spring_boot.ydpos.model.MainWriteVO" >
+  		<result property="writeNo"  column="writeNo"  />
+  		<result property="writeImg"  column="writeImg"  />
+  		<result property="writeCategory"  column="writeCategory"  />
+  		<result property="writeTitle"  column="writeTitle"  />
+  		<result property="writeHits"  column="writeHits"  />
+  		<result property="editordata"  column="editordata"  />
+  		<result property="writeDate"  column="writeDate"  />
+  		<result property="userId"  column="userId"  />
+  		<result property="userImg"  column="userImg"  />
+  		<result property="fileName"  column="fileName"  />
+  	</resultMap>
+	
+	<!-- 최신순으로 메인에서 5개 이미지 출력 -->	
+	<select id="recentView"  resultMap="mainWriteResult">
+		SELECT *
+		FROM writePage
+		ORDER BY writeNo DESC LIMIT 0, 5
+	</select>
+	
+	<!-- 7일 간 가장 높은 조회수 순으로 메인에서 3개 이미지 출력 -->
+	<select id="hitsView"  resultMap="mainWriteResult">
+		SELECT *
+		FROM writePage 
+		WHERE writeDate BETWEEN '2022-12-7' AND '2022-12-14' 
+		ORDER BY writeHits DESC LIMIT 0, 3
+		<!-- 현재 시간으로 출력 ecardDate AS [CURRENT_TIMESTAMP] -->
+	</select>
+	
+	
+</mapper>

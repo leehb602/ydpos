@@ -9,13 +9,12 @@
  		<result property="writeTitle" column= "writeTitle" />
  		<result property="writeImg" column= "writeImg" />
  		<result property="writeCategory" column= "writeCategory" />
- 		<result property="userType" column= "userType" />
+ 		<result property="writeHits" column= "writeHits" />
  		<result property="editordata" column= "editordata" /> 
  		<result property="writeDate" column= "writeDate" /> 
 
  	</resultMap>
- 	
-   				
+   	
    			<!-- 
    			
    			<select id="listAllWrite" resultMap="writeResult">
@@ -30,14 +29,37 @@
    			
      			 <!-- 글쓰기 등록 -->
   <insert id="insertwrite" parameterType="com.spring_boot.ydpos.model.writeVO">
-  		INSERT INTO writePage (writeTitle,writeCategory,editordata,fileName,userType,userId)
-  		VALUES (#{writeTitle},#{ writeCategory},#{editordata},#{fileName},#{userType},#{userId})
+  		INSERT INTO writePage (writeTitle,editordata,writeCategory,userId,fileName,userType)
+  		VALUES (#{writeTitle},#{editordata},#{ writeCategory},#{userId},#{fileName},#{userType})
   </insert>
   
-<!-- 글쓰기 등록에 필요한 유저 타입 반환  -->
-<select id="getUserType" parameterType="string" resultType="string">
-	select userType
-	from joinUserList
-	where userId=#{userId}
+  <!-- 글쓰기 유저타입 호출 -->
+  <select id="getUserType" parameterType="string" resultType="string">
+  	select userType
+  	from joinUserList
+  	where userId =#{userId}
+  </select>
+  
+  
+ <!-- Main에 사용할 코드 -->
+<!-- 최신순으로 메인에서 5개 이미지 출력 -->	
+<select id="recentView"  resultMap="writeResult">
+	SELECT *
+	FROM writePage
+	ORDER BY writeNo DESC LIMIT 0, 5
 </select>
+
+<!-- 7일 간 가장 높은 조회수 순으로 메인에서 3개 이미지 출력 -->
+<select id="hitsView"  resultMap="writeResult">
+	SELECT * FROM writePage 
+	WHERE writeDate BETWEEN '2022-12-7' AND '2022-12-14' 
+	ORDER BY writeHits DESC LIMIT 0, 3
+	<!-- 현재 시간으로 출력 ecardDate AS [CURRENT_TIMESTAMP] -->
+</select>
+<!-- Main에 사용할 코드 작성 끝 -->
+  
+  
+  
+  
+
    </mapper>

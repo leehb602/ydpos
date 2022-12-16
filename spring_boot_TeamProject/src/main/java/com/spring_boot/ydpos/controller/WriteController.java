@@ -30,37 +30,31 @@ public String writpage() {
 
 @RequestMapping("/write2") // 게시글 등록
 public String insertwrite(writeVO vo, 
-						  @RequestParam("environment") String environment,
-						  @RequestParam("area") String area,
-						  @RequestParam("theme") String theme,
-						  @RequestParam("group") String group,
+						  @RequestParam("writeCategory") String writeCategory,
 						  @RequestParam("writeImg") MultipartFile file,
 						  HttpSession session) throws IOException {
-//	@ModelAttribute writeVO writeVO )
 
 	vo.setUserId(vo.getUserId());
-	vo.setWriteCategory(environment + "/" + area + "/" + theme + "/" + group);
-//	vo.getWriteImg()
+	vo.setWriteCategory(writeCategory );
 
-	String uploadPath = "C:/springWorkspace/upload/";
+	String uploadPath = "C:/Users/82104/git/ydpos/spring_boot_TeamProject/src/main/resources/static/image/";
 
 	UUID uuid = UUID.randomUUID();
 
 	String fileName = uuid.toString() + "_" + file.getOriginalFilename();
+	String origin = file.getOriginalFilename();
 
-	File saveFile = new File(uploadPath + fileName);
+	File saveFile = new File(uploadPath + origin);
 
 	file.transferTo(saveFile);
 
-	vo.setFileName(fileName);
-
-	System.out.println("_" + vo.getWriteNo());
+	vo.setFileName(origin);
 	
 	vo.setUserType(service.getUserType(vo.getUserId()));
 
 	service.insertwrite(vo);
 
-	return "/";
+	return "redirect:/";
 }
 
 //@RequestMapping("/")

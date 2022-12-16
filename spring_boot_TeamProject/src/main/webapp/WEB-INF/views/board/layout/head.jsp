@@ -35,7 +35,7 @@
       }
       
       #record_main{
-      	height: 1312px;
+      	height: 1500px;
       }
     </style>
 	

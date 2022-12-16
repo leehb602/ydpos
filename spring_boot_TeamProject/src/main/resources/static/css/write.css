@@ -34,9 +34,9 @@
 
 
 nav {
-    margin-left: 140px;
+  margin-left: 124px;
     margin-right: 140px;
-    position: relative;
+    position: relative; 
 }
 
 .nav-menu {
@@ -101,9 +101,8 @@ nav {
 } */
 
 .company {
-   margin-left: 140px;
-    margin-right: 1220px;
-    position: relative;
+   margin:0px 30px;
+   
 }
    
 
@@ -248,7 +247,8 @@ body {
 
 .area{
     display: flex;
-    margin-right: 15px;
+   	position: relative;
+   	left: 50px;
 }
 .theme{
     display: flex;
@@ -337,8 +337,8 @@ body {
 }
 
 #a {
-    margin: 130px;
-    left: 50px;
+    margin: 0px 250px;
+    
   
 }
 .page_eTitle{
@@ -358,8 +358,9 @@ body {
     background-color:  #e9f3fa;
     font-family: 'LeferiPoint-WhiteObliqueA'; 
 }
-
-
+#write{
+ margin: 0px 250px;
+}
 /* 
 
 ------------푸터!----------------- */
@@ -417,9 +418,6 @@ body {
 /* 썸네일 css */
 
 #Thumbnail {
-    position: relative;
-    left: -500px;
-    top: 10px;
 
 }
 
